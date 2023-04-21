@@ -16,8 +16,8 @@ function Header() {
   };
 
   return (
-    <header className="bg-slate-300 h-auto flex flex-row flex-nowrap justify-between items-center px-32 py-2 mt-16">
-      <Link to="/">Home icon</Link>
+    <header className="bg-slate-300 fixed z-10 left-0 right-0 flex flex-row flex-nowrap justify-between items-center px-32 py-4 mt-14">
+      <Link to="/" className='font-semibold uppercase'>Home</Link>
       <div className="flex flex-row flex-nowrap gap-8 items-center">
         <div
           onClick={handleChangeLang}
@@ -31,12 +31,12 @@ function Header() {
           alt="switch dark/light mode"
           className="cursor-pointer"
         />
-        <div className="w-[3rem]">
-          <input id="burgerHandler" type="checkbox" className='hidden' />
+        <div className="w-[2.2rem]">
+          <input id="burgerHandler" type="checkbox" className="hidden" />
           <label htmlFor="burgerHandler" className={classes.burger}>
-            <div className='flex flex-row flex-nowrap gap-1'>
-              <div className='bg-green-500 w-[50%]'></div>
-              <div className='bg-green-500 w-[50%]'></div>
+            <div className="flex flex-row flex-nowrap gap">
+              <div className="w-[50%]"></div>
+              <div className="w-[50%]"></div>
             </div>
           </label>
         </div>
