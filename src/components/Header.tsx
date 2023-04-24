@@ -16,7 +16,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-slate-300 fixed z-10 left-0 right-0 flex flex-row flex-nowrap justify-between items-center px-32 py-4 mt-14">
+    <header className="bg-slate-400 fixed z-10 left-0 right-0 flex flex-row flex-nowrap justify-between items-center px-32 py-4 mt-20">
       <Link to="/" className='font-semibold uppercase'>Home</Link>
       <div className="flex flex-row flex-nowrap gap-8 items-center">
         <div
