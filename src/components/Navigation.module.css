@@ -1,23 +1,23 @@
-li {
+.nav_li {
   width: fit-content;
   position: relative;
   cursor: pointer;
-  color: darkslategray;
+  color: var(--color-teal-700);
 }
 
-li::after {
+.nav_li::after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
   left: 0;
   bottom: -8px;
-  border-bottom: 3px solid darkslategray;
+  border-bottom: 3px solid var(--color-teal-700);
   transform-origin: bottom left;
   transition: transform 0.25s 0.1s ease-out;
 }
 
-li:hover:after {
+.nav_li:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
