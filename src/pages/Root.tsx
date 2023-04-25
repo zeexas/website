@@ -5,7 +5,7 @@ function RootLayout() {
   return (
     <>
       <Header />
-      <main className='h-screen relative bg-teal-100'>
+      <main className='h-screen relative bg-cyan-50'>
         <Outlet />
       </main>
     </>
