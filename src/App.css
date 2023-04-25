@@ -1,5 +1,9 @@
 :root {
   --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  --color-cyan-700: #0e7490;
+  --main-color: var(--color-teal-700)
 }
 
 .my_underline {
@@ -15,7 +19,7 @@
   transform: scaleX(0);
   left: 0;
   bottom: -5px;
-  border-bottom: 2px solid var(--color-teal-700);
+  border-bottom: 2px solid var(--main-color);
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }

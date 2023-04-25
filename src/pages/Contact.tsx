@@ -1,5 +1,3 @@
-
-
 function ContactPage() {
   const h3Style = 'uppercase inline-block font-bold';
 
