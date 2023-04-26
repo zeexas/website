@@ -1,0 +1,28 @@
+.burger {
+  /* width: 3rem; */
+  cursor: pointer;
+}
+
+.burger:before,
+.burger:after,
+.burger div div {
+  content: '';
+  display: block;
+  height: 7px;
+  border-radius: 5px;
+  border: 2px solid darkslategray;
+  margin: 1px 0;
+  transition: 0.2s ease-in-out;
+}
+
+input[type='checkbox']:checked + .burger:before {
+  transform: translateY(11px) rotate(135deg);
+}
+
+input[type='checkbox']:checked + .burger:after {
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+input[type='checkbox']:checked + .burger div div {
+  transform: scale(0);
+}
