@@ -6,6 +6,10 @@
   --main-color: var(--color-teal-700)
 }
 
+body {
+  color: var(--main-color);
+}
+
 .my_underline {
   width: fit-content;
   position: relative;

@@ -32,7 +32,7 @@ function AboutPage() {
   const [aboutTech, setAboutTech] = useState(false)
 
   const iconStyle = 'w-[40px] h-[40px] cursor-pointer grayscale hover:grayscale-0 hover:scale-125 transition duration-200'
-  const iconBlock = 'w-[100%] flex flex-row flex-wrap gap-10 mt-8'
+  const iconBlock = 'w-[100%] flex flex-row flex-wrap gap-x-10 gap-y-6 mt-6'
 
   const handleClick = () => {
     setAboutTech(!aboutTech)
@@ -45,7 +45,7 @@ function AboutPage() {
           About
         </h2>
         {!aboutTech ? <section className="w-[80%] mt-8">
-          Hi, my name is Valery Li and I'm a front-end engineer who has experience in creating back-end infrastructure too.
+          Hi, my name is Valery Li and I'm a front-end engineer who has experience in building back-end infrastructure too.
           I also have wide experience (10+ years) in finance creating budgets and financial statements and understand all business processes in companies.
           I am passionate about learning new technologies and finding solutions in non-standard tasks.
           In my childhood I was crazy about chess, but now I prefer billiards more. <br />
