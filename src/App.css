@@ -2,12 +2,19 @@
   --color-teal-700: #0f766e;
   --color-teal-800: #115e59;
   --color-teal-900: #134e4a;
+  --color-cyan-50: #ecfeff;
   --color-cyan-700: #0e7490;
   --main-color: var(--color-teal-700)
 }
 
 body {
   color: var(--main-color);
+}
+
+main {
+  height: 100%;
+  position: relative;
+  background-color: var(--color-cyan-50);
 }
 
 .my_underline {

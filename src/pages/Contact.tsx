@@ -2,7 +2,7 @@ function ContactPage() {
   const h3Style = 'uppercase inline-block font-bold';
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-full min-h-screen flex justify-center items-center">
       <address className="w-[65%] h-[40%] flex flex-col text-teal-700 text-[1.3rem]">
         <h2 className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700">
           Contact
