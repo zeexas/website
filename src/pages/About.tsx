@@ -27,8 +27,10 @@ import Yarn from '../assets/techs/yarn.svg'
 import Webpack from '../assets/techs/webpack.svg'
 import Vite from '../assets/techs/vitejs.svg'
 import Stripe from '../assets/techs/stripe.svg'
+import { useSelector } from 'react-redux'
 
 function AboutPage() {
+  const showMenu = useSelector((state: any) => state.showMenu);
   const [aboutTech, setAboutTech] = useState(false)
 
   const iconStyle = 'w-[40px] h-[40px] cursor-pointer grayscale hover:grayscale-0 hover:scale-125 transition duration-200'
@@ -40,7 +42,7 @@ function AboutPage() {
 
   return (
     <div className="w-full min-h-screen flex justify-center items-center">
-      <div className="w-[65%] h-[50%] flex flex-col text-teal-700 text-[1.3rem]">
+      {!showMenu && <div className="w-[65%] h-[50%] flex flex-col text-teal-700 text-[1.3rem]">
         <h2 className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700">
           About
         </h2>
@@ -148,7 +150,7 @@ function AboutPage() {
           </div>
           <button onClick={handleClick}>next</button>
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

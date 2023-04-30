@@ -1,12 +1,13 @@
+import { useSelector } from "react-redux";
 import Intro from "../components/Intro"
-import Navigation from "../components/Navigation"
 
 function HomePage() {
+  const showMenu = useSelector((state: any) => state.showMenu);
+  
   return (
-    <>
-      {/* <Intro /> */}
-      <Navigation />
-    </>
+    <div className="w-full min-h-screen">
+      {!showMenu && <Intro />}
+    </div>
   )
 }
 

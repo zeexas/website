@@ -1,14 +1,16 @@
 import { Link, useParams } from 'react-router-dom';
 import { projects } from '../data/projects';
 import ArrowUpRight from '../assets/ArrowUpRight.svg';
+import { useSelector } from 'react-redux';
 
 function ProjectDetailPage() {
+  const showMenu = useSelector((state: any) => state.showMenu);
   const params = useParams();
   const project = projects.filter((item) => item.id === params.projectId)[0];
 
   return (
     <>
-      <div className="w-[60%] mx-auto min-h-screen flex flex-col pb-12">
+      {!showMenu && <div className="w-[60%] mx-auto min-h-screen flex flex-col pb-12">
         <div className="w-full h-[600px] overflow-hidden rounded-b-[2.5rem]">
           <img
             src={project.svg}
@@ -43,7 +45,7 @@ function ProjectDetailPage() {
             </div>
           )}
         </div>
-      </div>
+      </div>}
     </>
   );
 }

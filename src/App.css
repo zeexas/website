@@ -9,12 +9,12 @@
 
 body {
   color: var(--main-color);
+  background-color: var(--color-cyan-50);
 }
 
 main {
   height: 100%;
   position: relative;
-  background-color: var(--color-cyan-50);
 }
 
 .my_underline {
