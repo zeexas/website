@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import classes from './Work.module.css';
 import RightArrow from '../assets/RightArrow.svg';
 import { projects } from '../data/projects';
+import { useSelector } from 'react-redux';
 
 function WorkPage() {
+  const showMenu = useSelector((state: any) => state.showMenu);
   const [countries, setCountries] = useState(false);
   const [bulls, setBulls] = useState(false);
   const [momentum, setMomentum] = useState(false);
@@ -30,10 +32,12 @@ function WorkPage() {
     art: art,
   };
 
-  type workId = 'countries' | 'art' | 'momentum' | 'bulls';
+  type workId = 'countries' | 'report' | 'website' | 'art' | 'momentum' | 'bulls';
 
   const onMouseEnter: any = (id: workId) => {
     if (id === 'countries') setCountries(true);
+    if (id === 'report') setCountries(true);
+    if (id === 'website') setCountries(true);
     if (id === 'art') setArt(true);
     if (id === 'momentum') setMomentum(true);
     if (id === 'bulls') setBulls(true);
@@ -41,6 +45,8 @@ function WorkPage() {
 
   const onMouseLeave: any = (id: workId) => {
     if (id === 'countries') setCountries(false);
+    if (id === 'report') setCountries(false);
+    if (id === 'website') setCountries(false);
     if (id === 'art') setArt(false);
     if (id === 'momentum') setMomentum(false);
     if (id === 'bulls') setBulls(false);
@@ -48,7 +54,7 @@ function WorkPage() {
 
   return (
     <div className="w-full min-h-screen grid grid-rows-1 items-end">
-      <div className="w-full h-[70%] flex flex-row flex-nowrap gap-16">
+      {!showMenu && <div className="w-full h-[70%] flex flex-row flex-nowrap gap-16">
         <div className="w-1/2 h-full relative rounded-tr-[3rem] overflow-hidden">
           {projects.map((project) => {
             return (
@@ -104,7 +110,7 @@ function WorkPage() {
             </ul>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 }
