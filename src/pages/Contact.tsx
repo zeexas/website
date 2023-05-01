@@ -1,4 +1,6 @@
-import { useSelector } from "react-redux";
+import { motion as mo } from 'framer-motion';
+import { useSelector } from 'react-redux';
+import { animeContainer, animeItem } from '../animation';
 
 function ContactPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
@@ -6,48 +8,76 @@ function ContactPage() {
 
   return (
     <div className="w-full min-h-screen flex justify-center items-center">
-      {!showMenu && <address className="w-[65%] h-[40%] flex flex-col text-teal-700 text-[1.3rem]">
-        <h2 className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700">
-          Contact
-        </h2>
-        <section className="flex flex-row flex-wrap mt-6">
-          <div className="w-1/2">
-            <h3 className={h3Style}>Mail</h3>
-            <span className="ml-12 my_underline">
-              <a
-                href="mailto:lee_hobb@rambler.ru"
-                target="_blank"
-                rel="noreferrer"
-              >
-                lee_hobb@rambler.ru
-              </a>
-            </span>
+      {!showMenu && (
+        <mo.address
+          key="contact"
+          variants={animeContainer}
+          initial={'hidden'}
+          animate={'show'}
+          // exit={'hidden'}
+          className="w-[65%] h-[40%] flex flex-col text-teal-700 text-[1.3rem]"
+        >
+          <div className="overflow-hidden">
+            <mo.h2
+              variants={animeItem}
+              className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700"
+            >
+              Contact
+            </mo.h2>
           </div>
-          <div className="w-1/2 flex">
-            <h3 className={h3Style}>Social Medias</h3>
-            <ul className="flex flex-col ml-12 gap-1">
-              <li className="my_underline">
-                <a
-                  href="https://github.com/zeexas"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  github
-                </a>
-              </li>
-              <li className="my_underline">
-                <a
-                  href="https://www.linkedin.com/in/zeexas/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  linkedin
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </address>}
+          <section className="flex flex-row flex-wrap mt-6">
+            <div className="w-1/2 flex flex-row flex-nowrap">
+              <div className="overflow-hidden h-fit">
+                <mo.h3 variants={animeItem} className={h3Style}>
+                  Mail
+                </mo.h3>
+              </div>
+              <div className="overflow-hidden h-fit">
+                <mo.div variants={animeItem} className="ml-12 my_underline">
+                  <a
+                    href="mailto:lee_hobb@rambler.ru"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    lee_hobb@rambler.ru
+                  </a>
+                </mo.div>
+              </div>
+            </div>
+            <div className="w-1/2 flex">
+              <div className="overflow-hidden h-fit">
+                <mo.h3 variants={animeItem} className={h3Style}>
+                  Social Medias
+                </mo.h3>
+              </div>
+              <ul className="flex flex-col ml-12 gap-1">
+                <li className="my_underline overflow-hidden">
+                  <mo.a
+                    variants={animeItem}
+                    href="https://github.com/zeexas"
+                    target="_blank"
+                    rel="noreferrer"
+                    className='inline-block'
+                  >
+                    github
+                  </mo.a>
+                </li>
+                <li className="my_underline overflow-hidden">
+                  <mo.a
+                    variants={animeItem}
+                    href="https://www.linkedin.com/in/zeexas/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className='inline-block'
+                  >
+                    linkedin
+                  </mo.a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </mo.address>
+      )}
     </div>
   );
 }

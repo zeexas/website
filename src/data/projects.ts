@@ -1,4 +1,6 @@
 import Countries from '../assets/work/countries.svg';
+import Report from '../assets/work/Report.svg';
+import Website from '../assets/work/Website.svg';
 import Bulls from '../assets/work/BullCow.svg';
 import Momentum from '../assets/work/Momentum.svg';
 import ArtQuiz from '../assets/work/ArtQuiz.svg';
@@ -18,7 +20,7 @@ export const projects = [
     id: 'report',
     name: 'report',
     base_tech: 'react / nest',
-    svg: Countries,
+    svg: Report,
     about: `Full-stack web application prototype for financial company.
     The application receives the data from database to display the reports on the screen with possibility to export to MS Excel.
     It also has the authentication functionality`,
@@ -29,9 +31,9 @@ export const projects = [
     id: 'website',
     name: 'website',
     base_tech: 'react',
-    svg: Countries,
+    svg: Website,
     about: `This website you are browsing now is a basic project for my portfolio. Inspired by Sharlee`,
-    tech_stack: 'HTML, CSS, React, react-router-dom, Tailwind CSS, Vite, yarn, responsive',
+    tech_stack: 'HTML, CSS, React, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive',
     url: null
   },
   {
