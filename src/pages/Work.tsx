@@ -10,6 +10,8 @@ import { animeContainerStagger, animeItem } from '../animation';
 
 function WorkPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
+  const langStore = useSelector((state: any) => state.language);
+
   const [countries, setCountries] = useState(false);
   const [report, setReport] = useState(false);
   const [website, setWebsite] = useState(false);
@@ -20,14 +22,6 @@ function WorkPage() {
     'flex flex-row flex-nowrap cursor-pointer justify-between items-center group';
   const workItemTitle = 'py-6 text-2xl font-bold flex flex-row gap-2';
   const workItemStyleAnime = 'animate-freeItem group-hover:animate-hoverItem';
-
-  // check this interface for implementation
-  // interface projectsStateType {
-  //   countries: boolean;
-  //   bulls: boolean;
-  //   momentum: boolean;
-  //   art: boolean;
-  // }
 
   const projectsStateSet: any = {
     countries: countries,
@@ -128,12 +122,18 @@ function WorkPage() {
           <div className="w-1/2 h-full">
             <div className="w-[75%] h-full flex flex-col">
               <div className="overflow-hidden pb-4">
-                <mo.h3
+                {langStore === 'en' && <mo.h3
                   variants={animeItem}
                   className="text-5xl font-bold uppercase pb-6 border-solid border-0 border-slate-500 border-b-2"
                 >
                   Projects
-                </mo.h3>
+                </mo.h3>}
+                {langStore === 'ru' && <mo.h3
+                  variants={animeItem}
+                  className="text-5xl font-bold uppercase pb-6 border-solid border-0 border-slate-500 border-b-2"
+                >
+                  Проекты
+                </mo.h3>}
               </div>
               <ul
                 className={`w-full h-full overflow-auto ${classes.works_list}`}

@@ -34,6 +34,7 @@ import { animeContainerStagger, animeItem } from '../animation';
 
 function AboutPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
+  const langStore = useSelector((state: any) => state.language);
   const [aboutTech, setAboutTech] = useState(false);
 
   const iconStyle =
@@ -55,12 +56,18 @@ function AboutPage() {
         >
           <div className="w-full h-full flex flex-col">
             <div className="overflow-hidden">
-              <mo.h2
+              {langStore === 'en' && <mo.h2
                 variants={animeItem}
                 className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700"
               >
                 About
-              </mo.h2>
+              </mo.h2>}
+              {langStore === 'ru' && <mo.h2
+                variants={animeItem}
+                className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700"
+              >
+                О себе
+              </mo.h2>}
             </div>
             <mo.div
               initial={{ opacity: 0, translateY: '-30%' }}
@@ -68,13 +75,13 @@ function AboutPage() {
               transition={{ duration: 0.4, delay: 0.2 }}
               exit={{ opacity: 0 }}
             >
-              {!aboutTech && (
+              {!aboutTech && langStore === 'en' && (
                 <mo.section
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                   exit={{ opacity: 0 }}
-                  className="w-[80%] mt-8"
+                  className="w-[90%] mt-8"
                 >
                   Hi, my name is Valery Li and I'm a front-end engineer who has
                   experience in building back-end infrastructure too. I also
@@ -88,6 +95,21 @@ function AboutPage() {
                   2023)
                 </mo.section>
               )}
+              {!aboutTech && langStore === 'ru' && (
+                <mo.section
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="w-[90%] mt-8"
+                >
+                  Привет, меня зовут Валерий и я - фронтенд разработчик (2+ года опыта), также имеющий опыт создания серверной части приложений (бэкенд).
+                  У меня богатый опыт (10+ лет) работы в финансовой сфере (бюджетирование, финансовое планирование и различные виды отчетностей) и глубокое понимание
+                  бизнес процессов компаний. Обожаю изучать новые технологии и находить решения нестандартных задач.
+                  С детства играю в шахматы, но в последнее время предпочитаю бильярд. <br />
+                  Мои последние достижения: ~ разработал прототип фуллстек приложения для финансовой компании ~ пробежал полумарафон в Алматы (апрель, 2023)
+                </mo.section>
+              )}
               {aboutTech && (
                 <mo.section
                   initial={{ opacity: 0 }}
@@ -96,7 +118,8 @@ function AboutPage() {
                   exit={{ opacity: 0 }}
                   className="mt-8"
                 >
-                  <div>Technologies I use for creating web applications</div>
+                  {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}}>Technologies I use for creating web applications</mo.div>}
+                  {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}}>Технологии, с которыми я уже работал</mo.div>}
                   <div className={`${iconBlock} pl-2`}>
                     <a
                       href="https://developer.mozilla.org/en-US/docs/Web/HTML"
@@ -333,7 +356,7 @@ function AboutPage() {
               )}
             </mo.div>
             <div className="w-fit mt-16 overflow-hidden h-fit">
-              <mo.div
+              {langStore === 'en' && <mo.div
                 variants={animeItem}
                 className="flex flex-row gap-16 items-center"
               >
@@ -346,7 +369,21 @@ function AboutPage() {
                   <span>resume</span>
                 </div>
                 <button onClick={handleClick}>next</button>
-              </mo.div>
+              </mo.div>}
+              {langStore === 'ru' && <mo.div
+                variants={animeItem}
+                className="flex flex-row gap-16 items-center"
+              >
+                <div className="flex flex-row flex-nowrap gap-2 cursor-pointer my_underline">
+                  <img
+                    src={DocumentArrowDown}
+                    alt="arrow down"
+                    className="w-5"
+                  />
+                  <span>резюме</span>
+                </div>
+                <button onClick={handleClick}>дальше</button>
+              </mo.div>}
             </div>
           </div>
         </mo.div>

@@ -10,15 +10,24 @@ import { burgerActions } from '../store';
 function Header() {
   const dispatch = useDispatch();
   const showMenu = useSelector((state: any) => state.showMenu);
+  const langStore = useSelector((state: any) => state.language);
 
   const [mode, setMode] = useState('light');
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(langStore);
 
   const handleChangeMode = () => {
     mode === 'dark' ? setMode('light') : setMode('dark');
   };
   const handleChangeLang = () => {
-    lang === 'en' ? setLang('ru') : setLang('en');
+    if (lang === 'en') {
+      setLang('ru')
+      localStorage.setItem('lang', 'ru')
+      dispatch(burgerActions.setLanguage('ru'));
+    } else {
+      setLang('en')
+      localStorage.setItem('lang', 'en')
+      dispatch(burgerActions.setLanguage('en'));
+    }
   };
 
   const handleCheckbox = () => {

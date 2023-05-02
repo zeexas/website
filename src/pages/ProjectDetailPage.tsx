@@ -7,6 +7,8 @@ import { animeContainerStagger, animeItem } from '../animation';
 
 function ProjectDetailPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
+  const langStore = useSelector((state: any) => state.language);
+
   const params = useParams();
   const project = projects.filter((item) => item.id === params.projectId)[0];
 
@@ -37,17 +39,23 @@ function ProjectDetailPage() {
                 {project.name}
               </h1>
               <Link to=".." relative="path">
-                <p className="text-2xl italic hover:-translate-x-1 transition">
+                {langStore === 'en' && <mo.p initial={{opacity: 0}} animate={{opacity: 1}} className="text-2xl italic hover:-translate-x-1 transition">
                   back
-                </p>
+                </mo.p>}
+                {langStore === 'ru' && <mo.p initial={{opacity: 0}} animate={{opacity: 1}} className="text-2xl italic hover:-translate-x-1 transition">
+                  назад
+                </mo.p>}
               </Link>
             </mo.div>
           </div>
           <div className='overflow-hidden'>
             <mo.div variants={animeItem} className="grid grid-cols-[25%_1fr] gap-4 mt-4 text-xl">
-              <div className="uppercase font-semibold">about</div>
-              <div className="">{project.about}</div>
-              <div className="uppercase font-semibold">technologies</div>
+              {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">about</mo.div>}
+              {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">о проекте</mo.div>}
+              {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="">{project.about}</mo.div>}
+              {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="">{project.about_ru}</mo.div>}
+              {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">technologies</mo.div>}
+              {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">Технологии</mo.div>}
               <div className="">{project.tech_stack}</div>
               <div></div>
               {project.url && (
@@ -57,11 +65,16 @@ function ProjectDetailPage() {
                     alt="arrow up right"
                     className="w-[18px]"
                   />
-                  <div className="font-bold italic">
+                  {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-bold italic">
                     <a href={project.url} target="_blanc">
                       view project
                     </a>
-                  </div>
+                  </mo.div>}
+                  {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-bold italic">
+                    <a href={project.url} target="_blanc">
+                      к проекту
+                    </a>
+                  </mo.div>}
                 </div>
               )}
             </mo.div>

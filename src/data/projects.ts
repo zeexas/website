@@ -13,6 +13,8 @@ export const projects = [
     svg: Countries,
     about: `How much do you know about the countries you can name?
     Browse the world and choose your next holiday destination.`,
+    about_ru: `Как много Вы знаете о странах, которые можете назвать?
+    Исследуйте мир и выберите свой пункт назначения на следующй отпуск.`,
     tech_stack: 'HTML, CSS, Vue 3, vue-router, Tailwind CSS, Vite, npm, responsive',
     url: 'https://zeexas.github.io/rest-countries/'
   },
@@ -24,6 +26,9 @@ export const projects = [
     about: `Full-stack web application prototype for financial company.
     The application receives the data from database to display the reports on the screen with possibility to export to MS Excel.
     It also has the authentication functionality`,
+    about_ru: `Прототип full-stack веб приложения для финансовой компании.
+    Приложение получает сведения из базы данных, выводит их в виде регуляторной отчетности с возможностью экспортировать в Excel.
+    Также в наличии функциональность аутентификации пользователя для входа в приложение.`,
     tech_stack: 'React, react-router-dom, TypeScript, Tailwind CSS, Webpack, Nest.js, passport, Prisma, PostgreSQL, REST, yarn, responsive',
     url: null
   },
@@ -33,6 +38,7 @@ export const projects = [
     base_tech: 'react',
     svg: Website,
     about: `This website you are browsing now is a basic project for my portfolio. Inspired by Sharlee`,
+    about_ru: `Этот сайт, который Вы в настоящее время исследуете, является базовым проектом моего портфолио. Вдохновлен Sharlee`,
     tech_stack: 'HTML, CSS, React, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive',
     url: null
   },
@@ -44,6 +50,8 @@ export const projects = [
     about: `Hundreds of world masterpieces are collected in this game, where you
     can test you knowledge in art. And don't forget to
     check out the settings.`,
+    about_ru: `Сотни шедевров живописи собраны в этой игре, где Вы можете проверить свои познания в данном виде искусства.
+    И не забудьте заглянуть в настройки.`,
     tech_stack: 'HTML, CSS, JavaScript, Webpack, npm',
     url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/art-quiz/'
   },
@@ -53,6 +61,7 @@ export const projects = [
     base_tech: 'vanilla',
     svg: Momentum,
     about: 'This is a clone of the popular Google Chrome extension Momentum (not exact but kind of)',
+    about_ru: 'Клон популярного одноименного расширения Google Chrome (не то, чтобы 100% копия, но все же)',
     tech_stack: 'HTML, CSS, JavaScript',
     url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/momentum/'
   },
@@ -63,6 +72,8 @@ export const projects = [
     svg: Bulls,
     about: `I love games, challenges, numbers and "Bulls and Cows" was our favorite game at school.
     So, try to find the secret number and beat your own record.`,
+    about_ru: `Обожаю игры, числа и испытания ума, а игра "Быки и Коровы" была нашим любимым развлечением на уроках в школе.
+    Готовы угадать число и установить свой личный рекорд?`,
     tech_stack: 'HTML, CSS, JavaScript',
     url: 'https://zeexas.github.io/Bulls_Cows/'
   },
