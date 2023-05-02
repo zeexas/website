@@ -16,7 +16,8 @@ export const projects = [
     about_ru: `Как много Вы знаете о странах, которые можете назвать?
     Исследуйте мир и выберите свой пункт назначения на следующй отпуск.`,
     tech_stack: 'HTML, CSS, Vue 3, vue-router, Tailwind CSS, Vite, npm, responsive',
-    url: 'https://zeexas.github.io/rest-countries/'
+    url: 'https://zeexas.github.io/rest-countries/',
+    code: 'https://github.com/zeexas/rest-countries',
   },
   {
     id: 'report',
@@ -30,7 +31,8 @@ export const projects = [
     Приложение получает сведения из базы данных, выводит их в виде регуляторной отчетности с возможностью экспортировать в Excel.
     Также в наличии функциональность аутентификации пользователя для входа в приложение.`,
     tech_stack: 'React, react-router-dom, TypeScript, Tailwind CSS, Webpack, Nest.js, passport, Prisma, PostgreSQL, REST, yarn, responsive',
-    url: null
+    url: null,
+    code: 'https://github.com/zeexas/broker-server',
   },
   {
     id: 'website',
@@ -40,7 +42,8 @@ export const projects = [
     about: `This website you are browsing now is a basic project for my portfolio. Inspired by Sharlee`,
     about_ru: `Этот сайт, который Вы в настоящее время исследуете, является базовым проектом моего портфолио. Вдохновлен Sharlee`,
     tech_stack: 'HTML, CSS, React, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive',
-    url: null
+    url: null,
+    code: 'https://github.com/zeexas/website',
   },
   {
     id: 'art',
@@ -53,7 +56,8 @@ export const projects = [
     about_ru: `Сотни шедевров живописи собраны в этой игре, где Вы можете проверить свои познания в данном виде искусства.
     И не забудьте заглянуть в настройки.`,
     tech_stack: 'HTML, CSS, JavaScript, Webpack, npm',
-    url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/art-quiz/'
+    url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/art-quiz/',
+    code: 'https://github.com/zeexas/art-quiz',
   },
   {
     id: 'momentum',
@@ -63,7 +67,8 @@ export const projects = [
     about: 'This is a clone of the popular Google Chrome extension Momentum (not exact but kind of)',
     about_ru: 'Клон популярного одноименного расширения Google Chrome (не то, чтобы 100% копия, но все же)',
     tech_stack: 'HTML, CSS, JavaScript',
-    url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/momentum/'
+    url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/momentum/',
+    code: 'https://github.com/zeexas/momentum',
   },
   {
     id: 'bulls',
@@ -75,6 +80,7 @@ export const projects = [
     about_ru: `Обожаю игры, числа и испытания ума, а игра "Быки и Коровы" была нашим любимым развлечением на уроках в школе.
     Готовы угадать число и установить свой личный рекорд?`,
     tech_stack: 'HTML, CSS, JavaScript',
-    url: 'https://zeexas.github.io/Bulls_Cows/'
+    url: 'https://zeexas.github.io/Bulls_Cows/',
+    code: 'https://github.com/zeexas/Bulls_Cows',
   },
 ];

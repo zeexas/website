@@ -1,13 +1,15 @@
 import { Link, useParams } from 'react-router-dom';
 import { projects } from '../data/projects';
 import ArrowUpRight from '../assets/ArrowUpRight.svg';
+import ArrowUpRight_white from '../assets/ArrowUpRight_white.svg';
 import { useSelector } from 'react-redux';
 import { motion as mo } from 'framer-motion';
-import { animeContainerStagger, animeItem } from '../animation';
+import { animeContainerStagger, animeItem } from '../data/animation';
 
 function ProjectDetailPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
   const langStore = useSelector((state: any) => state.language);
+  const modeStore = useSelector((state: any) => state.mode);
 
   const params = useParams();
   const project = projects.filter((item) => item.id === params.projectId)[0];
@@ -34,7 +36,7 @@ function ProjectDetailPage() {
             />
           </mo.div>
           <div className="overflow-hidden">
-            <mo.div variants={animeItem} className='h-fit pb-6 border-solid border-0 border-slate-500 border-b-2 flex flex-row flex-nowrap justify-between items-baseline '>
+            <mo.div variants={animeItem} className='h-fit pb-6 border-solid border-0 border-b-2 flex flex-row flex-nowrap justify-between items-baseline '>
               <h1 className="text-5xl font-bold mt-8 uppercase">
                 {project.name}
               </h1>
@@ -58,25 +60,47 @@ function ProjectDetailPage() {
               {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">Технологии</mo.div>}
               <div className="">{project.tech_stack}</div>
               <div></div>
-              {project.url && (
-                <div className="my_underline flex flex-row flex-nowrap gap-2 items-end">
-                  <img
-                    src={ArrowUpRight}
-                    alt="arrow up right"
-                    className="w-[18px]"
-                  />
-                  {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-bold italic">
-                    <a href={project.url} target="_blanc">
-                      view project
-                    </a>
-                  </mo.div>}
-                  {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-bold italic">
-                    <a href={project.url} target="_blanc">
-                      к проекту
-                    </a>
-                  </mo.div>}
-                </div>
-              )}
+              <div className='flex flex-row flex-nowrap gap-10'>
+                {project.url && (
+                  <div className="my_underline flex flex-row flex-nowrap gap-2 items-end">
+                    <img
+                      src={modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight}
+                      alt="arrow up right"
+                      className="w-[18px]"
+                    />
+                    {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
+                      <a href={project.url} target="_blanc">
+                        view project
+                      </a>
+                    </mo.div>}
+                    {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
+                      <a href={project.url} target="_blanc">
+                        к проекту
+                      </a>
+                    </mo.div>}
+                  </div>
+                )}
+                {project.code && (
+                  <div className="my_underline flex flex-row flex-nowrap gap-2 items-end">
+                    <img
+                      src={modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight}
+                      alt="arrow up right"
+                      className="w-[18px]"
+                    />
+                    {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
+                      <a href={project.code} target="_blanc">
+                        view code
+                      </a>
+                    </mo.div>}
+                    {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
+                      <a href={project.code} target="_blanc">
+                        глянуть код
+                      </a>
+                    </mo.div>}
+                  </div>
+                )}
+
+              </div>
             </mo.div>
           </div>
         </mo.div>
