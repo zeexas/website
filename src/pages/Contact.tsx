@@ -4,6 +4,7 @@ import { animeContainer, animeItem } from '../animation';
 
 function ContactPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
+  const langStore = useSelector((state: any) => state.language);
   const h3Style = 'uppercase inline-block font-bold';
 
   return (
@@ -18,12 +19,18 @@ function ContactPage() {
           className="w-[65%] h-[40%] flex flex-col text-teal-700 text-[1.3rem]"
         >
           <div className="overflow-hidden">
-            <mo.h2
+            {langStore === 'en' && <mo.h2
               variants={animeItem}
               className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700"
             >
               Contact
-            </mo.h2>
+            </mo.h2>}
+            {langStore === 'ru' && <mo.h2
+              variants={animeItem}
+              className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2 border-teal-700"
+            >
+              Контакты
+            </mo.h2>}
           </div>
           <section className="flex flex-row flex-wrap mt-6">
             <div className="w-1/2 flex flex-row flex-nowrap">

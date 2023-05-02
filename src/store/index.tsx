@@ -2,10 +2,11 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   showMenu: false,
+  language: localStorage.getItem('lang') || 'en',
 };
 
-const burgerSlice = createSlice({
-  name: 'burger',
+const headerSlice = createSlice({
+  name: 'header',
   initialState,
   reducers: {
     openMenu(state) {
@@ -14,13 +15,16 @@ const burgerSlice = createSlice({
     closeMenu(state) {
       state.showMenu = false;
     },
+    setLanguage(state, action) {
+      state.language = action.payload
+    }
   },
 });
 
 const store = configureStore({
-  reducer: burgerSlice.reducer,
+  reducer: headerSlice.reducer,
 });
 
-export const burgerActions = burgerSlice.actions;
+export const burgerActions = headerSlice.actions;
 
 export default store;
