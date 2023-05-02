@@ -1,7 +1,10 @@
 :root {
+  --color-teal-100: #ccfbf1;
   --color-teal-700: #0f766e;
   --color-teal-800: #115e59;
   --color-teal-900: #134e4a;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
   --color-cyan-50: #ecfeff;
   --color-cyan-700: #0e7490;
   --main-color: var(--color-teal-700)
@@ -10,6 +13,8 @@
 body {
   color: var(--main-color);
   background-color: var(--color-cyan-50);
+  background-color: var(--color-emerald-50);
+  background-color: var(--color-emerald-100);
 }
 
 main {
@@ -21,6 +26,7 @@ main {
   width: fit-content;
   position: relative;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .my_underline::after {
@@ -30,7 +36,7 @@ main {
   transform: scaleX(0);
   left: 0;
   bottom: -5px;
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 2px solid;
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
