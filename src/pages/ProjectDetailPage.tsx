@@ -4,7 +4,11 @@ import ArrowUpRight from '../assets/ArrowUpRight.svg';
 import ArrowUpRight_white from '../assets/ArrowUpRight_white.svg';
 import { useSelector } from 'react-redux';
 import { motion as mo } from 'framer-motion';
-import { animeContainerStagger, animeItem } from '../data/animation';
+import {
+  animeBasic,
+  animeContainerStagger,
+  animeItem,
+} from '../data/animation';
 
 function ProjectDetailPage() {
   const showMenu = useSelector((state: any) => state.showMenu);
@@ -13,6 +17,8 @@ function ProjectDetailPage() {
 
   const params = useParams();
   const project = projects.filter((item) => item.id === params.projectId)[0];
+
+  const backBtnStyle = 'text-2xl italic hover:-translate-x-1 transition';
 
   return (
     <>
@@ -26,7 +32,7 @@ function ProjectDetailPage() {
           <mo.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{duration: 1}}
+            // transition={{ duration: 1 }}
             className="w-full h-[600px] overflow-hidden rounded-b-[2.5rem]"
           >
             <img
@@ -36,70 +42,139 @@ function ProjectDetailPage() {
             />
           </mo.div>
           <div className="overflow-hidden">
-            <mo.div variants={animeItem} className='h-fit pb-6 border-solid border-0 border-b-2 flex flex-row flex-nowrap justify-between items-baseline '>
+            <mo.div
+              variants={animeItem}
+              className="h-fit pb-6 border-solid border-0 border-b-2 flex flex-row flex-nowrap justify-between items-baseline "
+            >
               <h1 className="text-5xl font-bold mt-8 uppercase">
                 {project.name}
               </h1>
               <Link to=".." relative="path">
-                {langStore === 'en' && <mo.p initial={{opacity: 0}} animate={{opacity: 1}} className="text-2xl italic hover:-translate-x-1 transition">
-                  back
-                </mo.p>}
-                {langStore === 'ru' && <mo.p initial={{opacity: 0}} animate={{opacity: 1}} className="text-2xl italic hover:-translate-x-1 transition">
-                  назад
-                </mo.p>}
+                {langStore === 'en' && (
+                  <mo.p variants={animeBasic} className={backBtnStyle}>
+                    back
+                  </mo.p>
+                )}
+                {langStore === 'ru' && (
+                  <mo.p variants={animeBasic} className={backBtnStyle}>
+                    назад
+                  </mo.p>
+                )}
               </Link>
             </mo.div>
           </div>
-          <div className='overflow-hidden'>
-            <mo.div variants={animeItem} className="grid grid-cols-[25%_1fr] gap-4 mt-4 text-xl">
-              {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">about</mo.div>}
-              {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">о проекте</mo.div>}
-              {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="">{project.about}</mo.div>}
-              {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="">{project.about_ru}</mo.div>}
-              {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">technologies</mo.div>}
-              {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="uppercase font-semibold">Технологии</mo.div>}
+          <div className="overflow-hidden">
+            <mo.div
+              variants={animeItem}
+              className="grid grid-cols-[25%_1fr] gap-4 mt-4 text-xl"
+            >
+              {langStore === 'en' && (
+                <mo.div
+                  variants={animeBasic}
+                  className="uppercase font-semibold"
+                >
+                  about
+                </mo.div>
+              )}
+              {langStore === 'ru' && (
+                <mo.div
+                  variants={animeBasic}
+                  className="uppercase font-semibold"
+                >
+                  о проекте
+                </mo.div>
+              )}
+              {langStore === 'en' && (
+                <mo.div variants={animeBasic} className="">
+                  {project.about}
+                </mo.div>
+              )}
+              {langStore === 'ru' && (
+                <mo.div variants={animeBasic} className="">
+                  {project.about_ru}
+                </mo.div>
+              )}
+              {langStore === 'en' && (
+                <mo.div
+                  variants={animeBasic}
+                  className="uppercase font-semibold"
+                >
+                  technologies
+                </mo.div>
+              )}
+              {langStore === 'ru' && (
+                <mo.div
+                  variants={animeBasic}
+                  className="uppercase font-semibold"
+                >
+                  Технологии
+                </mo.div>
+              )}
               <div className="">{project.tech_stack}</div>
               <div></div>
-              <div className='flex flex-row flex-nowrap gap-10'>
+              <div className="flex flex-row flex-nowrap gap-10">
                 {project.url && (
                   <div className="my_underline flex flex-row flex-nowrap gap-2 items-end">
                     <img
-                      src={modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight}
+                      src={
+                        modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight
+                      }
                       alt="arrow up right"
                       className="w-[18px]"
                     />
-                    {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
-                      <a href={project.url} target="_blanc">
-                        view project
-                      </a>
-                    </mo.div>}
-                    {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
-                      <a href={project.url} target="_blanc">
-                        к проекту
-                      </a>
-                    </mo.div>}
+                    {langStore === 'en' && (
+                      <mo.div
+                        variants={animeBasic}
+                        className="font-semibold italic"
+                      >
+                        <a href={project.url} target="_blanc">
+                          view project
+                        </a>
+                      </mo.div>
+                    )}
+                    {langStore === 'ru' && (
+                      <mo.div
+                        variants={animeBasic}
+                        className="font-semibold italic"
+                      >
+                        <a href={project.url} target="_blanc">
+                          к проекту
+                        </a>
+                      </mo.div>
+                    )}
                   </div>
                 )}
                 {project.code && (
                   <div className="my_underline flex flex-row flex-nowrap gap-2 items-end mt-2">
                     <img
-                      src={modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight}
+                      src={
+                        modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight
+                      }
                       alt="arrow up right"
                       className="w-[18px]"
                     />
-                    {langStore === 'en' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
-                      <a href={project.code} target="_blanc">
-                        view code
-                      </a>
-                    </mo.div>}
-                    {langStore === 'ru' && <mo.div initial={{opacity: 0}} animate={{opacity: 1}} className="font-semibold italic">
-                      <a href={project.code} target="_blanc">
-                        глянуть код
-                      </a>
-                    </mo.div>}
+                    {langStore === 'en' && (
+                      <mo.div
+                        variants={animeBasic}
+                        className="font-semibold italic"
+                      >
+                        <a href={project.code} target="_blanc">
+                          view code
+                        </a>
+                      </mo.div>
+                    )}
+                    {langStore === 'ru' && (
+                      <mo.div
+                        variants={animeBasic}
+                        className="font-semibold italic"
+                      >
+                        <a href={project.code} target="_blanc">
+                          глянуть код
+                        </a>
+                      </mo.div>
+                    )}
                   </div>
                 )}
-
               </div>
             </mo.div>
           </div>
