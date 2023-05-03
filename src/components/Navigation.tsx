@@ -7,21 +7,16 @@ import { animeContainerStagger, animeItem } from '../data/animation';
 
 function Navigation() {
   const dispatch = useDispatch();
-  const showMenu = useSelector((state: any) => state.showMenu);
   const langStore = useSelector((state: any) => state.language);
 
   const handleClickLink = () => {
-    dispatch(showMenu ? headerActions.closeMenu() : headerActions.openMenu());
+    dispatch(headerActions.closeMenu());
   };
 
   return (
     <section className='w-full h-screen'>
-      <mo.nav
+      <nav
         key="navigation"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.75, ease: 'easeOut' }}
         className={`w-[50%] absolute top-[180px] left-[50%] -translate-x-1/2 my-auto p-6 z-30`}
       >
         <mo.ul
@@ -71,7 +66,7 @@ function Navigation() {
             </Link>
           </div>
         </mo.ul>
-      </mo.nav>
+      </nav>
     </section>
   );
 }
