@@ -14,7 +14,7 @@ export const projects = [
     about: `How much do you know about the countries you can name?
     Browse the world and choose your next holiday destination.`,
     about_ru: `Как много Вы знаете о странах, которые можете назвать?
-    Исследуйте мир и выберите свой пункт назначения на следующй отпуск.`,
+    Исследуйте мир и выберите свой пункт назначения на следующий отпуск.`,
     tech_stack: 'HTML, CSS, Vue 3, vue-router, Tailwind CSS, Vite, npm, responsive',
     url: 'https://zeexas.github.io/rest-countries/',
     code: 'https://github.com/zeexas/rest-countries',
@@ -29,7 +29,7 @@ export const projects = [
     It also has the authentication functionality`,
     about_ru: `Прототип full-stack веб приложения для финансовой компании.
     Приложение получает сведения из базы данных, выводит их в виде регуляторной отчетности с возможностью экспортировать в Excel.
-    Также в наличии функциональность аутентификации пользователя для входа в приложение.`,
+    Также в наличии функциональность аутентификации пользователя.`,
     tech_stack: 'React, react-router-dom, TypeScript, Tailwind CSS, Webpack, Nest.js, passport, Prisma, PostgreSQL, REST, yarn, responsive',
     url: null,
     code: 'https://github.com/zeexas/broker-server',

@@ -20,6 +20,9 @@ function WorkPage() {
   const [bulls, setBulls] = useState(false);
   const [momentum, setMomentum] = useState(false);
   const [art, setArt] = useState(false);
+
+  const titleStyle =
+    'text-5xl font-bold uppercase pb-6 border-solid border-0 border-slate-500 border-b-2';
   const workItemStyle =
     'flex flex-row flex-nowrap cursor-pointer justify-between items-center group';
   const workItemTitle = 'py-6 text-2xl font-bold flex flex-row gap-2';
@@ -134,18 +137,12 @@ function WorkPage() {
               <div className="w-[75%] h-full flex flex-col">
                 <div className="overflow-hidden pb-4">
                   {langStore === 'en' && (
-                    <mo.h3
-                      variants={animeItem}
-                      className="text-5xl font-bold uppercase pb-6 border-solid border-0 border-slate-500 border-b-2"
-                    >
+                    <mo.h3 variants={animeItem} className={titleStyle}>
                       Projects
                     </mo.h3>
                   )}
                   {langStore === 'ru' && (
-                    <mo.h3
-                      variants={animeItem}
-                      className="text-5xl font-bold uppercase pb-6 border-solid border-0 border-slate-500 border-b-2"
-                    >
+                    <mo.h3 variants={animeItem} className={titleStyle}>
                       Проекты
                     </mo.h3>
                   )}
@@ -168,7 +165,11 @@ function WorkPage() {
                           <Link to={`${project.id}`} className={workItemStyle}>
                             <div className={workItemTitle}>
                               <img
-                                src={modeStore === 'dark' ? RightArrow_white : RightArrow}
+                                src={
+                                  modeStore === 'dark'
+                                    ? RightArrow_white
+                                    : RightArrow
+                                }
                                 alt="arrow right"
                                 className={`w-4 ${workItemStyleAnime}`}
                               />
