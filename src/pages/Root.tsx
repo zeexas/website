@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import { useSelector } from 'react-redux';
 import Navigation from '../components/Navigation';
-import { AnimatePresence } from 'framer-motion';
 import { darkStyle_base, darkStyle_bg } from '../data/styleVars';
 
 function RootLayout() {
@@ -13,10 +12,8 @@ function RootLayout() {
     <div className={mode}>
       <Header />
       <main className={`${darkStyle_base} ${darkStyle_bg}`}>
-        {/* <AnimatePresence> */}
         {showMenu && <Navigation />}
         <Outlet />
-        {/* </AnimatePresence> */}
       </main>
     </div>
   );

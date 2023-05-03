@@ -81,7 +81,7 @@ function ProjectDetailPage() {
                   </div>
                 )}
                 {project.code && (
-                  <div className="my_underline flex flex-row flex-nowrap gap-2 items-end">
+                  <div className="my_underline flex flex-row flex-nowrap gap-2 items-end mt-2">
                     <img
                       src={modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight}
                       alt="arrow up right"

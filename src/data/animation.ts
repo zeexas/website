@@ -22,6 +22,11 @@ export const animeContainerStagger = {
   },
 };
 
+export const animeBasic = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 export const animeItem = {
   hidden: { y: '-200%' },
   show: { y: '0%', transition: { duration: 0.4 } },
