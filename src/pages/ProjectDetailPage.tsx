@@ -40,7 +40,8 @@ function ProjectDetailPage() {
             variants={animeItemImage}
             src={project.svg}
             alt={`${project.id} app image`}
-            className="w-full lg:h-[75vh] rounded-[1.8rem] md:rounded-[2rem] lg:rounded-b-[2.5rem] lg:rounded-t-none object-cover object-top"
+            className={`w-full lg:h-[75vh] rounded-[1.8rem] md:rounded-[2rem] lg:rounded-b-[2.5rem] lg:rounded-t-none 
+              object-cover object-top drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]`}
           />
           <div className="overflow-hidden">
             <mo.div
