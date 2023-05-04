@@ -15,6 +15,7 @@ body {
   background-color: var(--color-cyan-50);
   background-color: var(--color-emerald-50);
   background-color: var(--color-emerald-100);
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {

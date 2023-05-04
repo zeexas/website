@@ -1,6 +1,12 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export type storeState = {
+  showMenu: boolean,
+  language: string | null,
+  mode: string | null,
+}
+
+const initialState: storeState = {
   showMenu: false,
   language: localStorage.getItem('lang') || 'en',
   mode: localStorage.getItem('mode') || 'dark'
