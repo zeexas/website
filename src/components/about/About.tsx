@@ -6,13 +6,13 @@ import { animeBasic, animeContainerStagger, animeItem } from '../../data/animati
 import DocumentArrowDown from '../../assets/DocumentArrowDown.svg';
 import Resume from '../../assets/Valery_Li_Resume.pdf'
 import Resume_ru from '../../assets/Valery_Li_Resume_ru.pdf'
-
 // import AboutMe from './AboutMe';
 import { techsMain, techsOthers } from '../../data/techs';
+import { storeState } from '../../store';
 
 function About() {
-  const langStore = useSelector((state: any) => state.language);
-  const modeStore = useSelector((state: any) => state.mode);
+  const langStore = useSelector((state: storeState) => state.language);
+  const modeStore = useSelector((state: storeState) => state.mode);
   const [aboutTech, setAboutTech] = useState(false);
 
   const iconBlock = `w-[100%] flex flex-row flex-wrap gap-x-5 md:gap-x-6 lg:gap-x-10 gap-y-6 mt-6 pl-2`;

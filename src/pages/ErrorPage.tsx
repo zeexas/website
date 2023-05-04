@@ -1,14 +1,16 @@
 import { useSelector } from 'react-redux';
+import { motion as mo } from 'framer-motion';
+
 import Header from '../components/header/Header';
 import Navigation from '../components/Navigation';
-import { motion as mo } from 'framer-motion';
 import { darkStyle_bg } from '../data/styleVars';
 import { darkStyle_base } from '../data/styleVars';
+import { storeState } from '../store';
 
 function ErrorPage() {
-  const showMenu = useSelector((state: any) => state.showMenu);
-  const langStore = useSelector((state: any) => state.language);
-  const mode = useSelector((state: any) => state.mode);
+  const showMenu = useSelector((state: storeState) => state.showMenu);
+  const langStore = useSelector((state: storeState) => state.language);
+  const mode = useSelector((state: storeState) => state.mode);
 
   const error_style = `w-full min-h-screen flex flex-col gap-4 items-center justify-center text-center text-3xl font-bold`;
 

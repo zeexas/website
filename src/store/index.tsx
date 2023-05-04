@@ -2,8 +2,8 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 export type storeState = {
   showMenu: boolean,
-  language: string | null,
-  mode: string | null,
+  language: string,
+  mode: string,
 }
 
 const initialState: storeState = {

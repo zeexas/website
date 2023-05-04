@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
-import classes from './Navigation.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { headerActions } from '../store';
 import { motion as mo } from 'framer-motion';
+
+import classes from './Navigation.module.css';
+import { headerActions, storeState } from '../store';
 import { animeContainerStagger, animeItem } from '../data/animation';
 
 function Navigation() {
   const dispatch = useDispatch();
-  const langStore = useSelector((state: any) => state.language);
+  const langStore = useSelector((state: storeState) => state.language);
 
   const handleClickLink = () => {
     dispatch(headerActions.closeMenu());
