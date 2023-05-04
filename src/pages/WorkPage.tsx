@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { motion as mo } from 'framer-motion';
+import { easeOut, motion as mo } from 'framer-motion';
 
 import classes from './Work.module.css';
 import RightArrow from '../assets/RightArrow.svg';
@@ -29,12 +29,12 @@ function WorkPage() {
   const workItemStyleAnime = 'animate-freeItem group-hover:animate-hoverItem';
 
   const projectsStateSet: any = {
-    countries: countries,
-    report: report,
-    website: website,
-    bulls: bulls,
-    momentum: momentum,
-    art: art,
+    countries,
+    report,
+    website,
+    bulls,
+    momentum,
+    art,
   };
 
   const onMouseEnter: any = (id: any) => {
@@ -101,7 +101,7 @@ function WorkPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className={`hidden lg:block lg:w-1/2 h-full relative rounded-tr-[3rem] 
-                overflow-hidden drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]`}
+                overflow-hidden drop-shadow-[0_0_15px_rgba(0,0,0,0.3)]`}
             >
               {projects.map((project) => {
                 return (
@@ -116,12 +116,10 @@ function WorkPage() {
                         ? {
                             opacity: 1,
                             visibility: 'visible',
-                            transition: { delay: 0.1 },
                           }
                         : {
                             opacity: 0,
                             visibility: 'hidden',
-                            transition: { delay: 0.1 },
                           }
                     }
                     transition={{ ease: 'easeOut', duration: 0.5 }}
