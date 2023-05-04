@@ -21,11 +21,11 @@ function WorkPage() {
   const [momentum, setMomentum] = useState(false);
   const [art, setArt] = useState(false);
 
-  const titleStyle =
-    'text-5xl font-bold uppercase pb-6 border-solid border-0 border-slate-500 border-b-2';
+  const titleStyle = `text-3xl sm:text-4xl md:text-5xl font-bold uppercase pb-6 
+    border-solid border-0 border-slate-500 border-b md:border-b-2`;
   const workItemStyle =
     'flex flex-row flex-nowrap cursor-pointer justify-between items-center group';
-  const workItemTitle = 'py-6 text-2xl font-bold flex flex-row gap-2';
+  const workItemTitle = 'py-3 sm:py-4 md:py-6 text-base sm:text-xl md:text-2xl font-bold flex flex-row gap-2';
   const workItemStyleAnime = 'animate-freeItem group-hover:animate-hoverItem';
 
   const projectsStateSet: any = {
@@ -100,7 +100,8 @@ function WorkPage() {
             <mo.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="w-1/2 h-full relative rounded-tr-[3rem] overflow-hidden"
+              className={`hidden lg:block lg:w-1/2 h-full relative rounded-tr-[3rem] 
+                overflow-hidden drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]`}
             >
               {projects.map((project) => {
                 return (
@@ -127,14 +128,14 @@ function WorkPage() {
                     key={project.id}
                     src={project.svg}
                     alt={`${project.id} app`}
-                    className={`absolute left-0 bottom-0 h-full w-full opacity-0 invisible transition ease-linear`}
+                    className={`absolute left-0 bottom-0 h-full w-full opacity-0 invisible object-cover object-top`}
                   />
                 );
               })}
             </mo.div>
 
-            <div className="w-1/2 h-full">
-              <div className="w-[75%] h-full flex flex-col">
+            <div className="w-[80%] mx-auto lg:w-1/2 h-full">
+              <div className="lg:w-[75%] h-full flex flex-col">
                 <div className="overflow-hidden pb-4">
                   {langStore === 'en' && (
                     <mo.h3 variants={animeItem} className={titleStyle}>
@@ -147,6 +148,7 @@ function WorkPage() {
                     </mo.h3>
                   )}
                 </div>
+                
                 <ul
                   className={`w-full h-full overflow-auto ${classes.works_list}`}
                 >
@@ -160,7 +162,7 @@ function WorkPage() {
                       >
                         <mo.div
                           variants={animeItem}
-                          className="border-solid border-0 border-slate-500 border-b-2"
+                          className="border-solid border-0 border-slate-500 border-b md:border-b-2"
                         >
                           <Link to={`${project.id}`} className={workItemStyle}>
                             <div className={workItemTitle}>
@@ -182,7 +184,7 @@ function WorkPage() {
                                 {project.name}
                               </p>
                             </div>
-                            <p className="text-lg">{project.base_tech}</p>
+                            <p className="text-sm sm:text-base md:text-lg">{project.base_tech}</p>
                           </Link>
                         </mo.div>
                       </li>

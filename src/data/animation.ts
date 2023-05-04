@@ -28,8 +28,13 @@ export const animeBasic = {
 };
 
 export const animeItem = {
-  hidden: { y: '-200%' },
-  show: { y: '0%', transition: { duration: 0.4 } },
+  hidden: { y: '-200%', opacity: 0 },
+  show: { y: '0%', opacity: 1, transition: { duration: 0.4 } },
+};
+
+export const animeItemImage = {
+  hidden: { y: '-20%', opacity: 0 },
+  show: { y: '0%', opacity: 1, transition: { duration: 0.4 } },
 };
 
 export const animeBlock = {

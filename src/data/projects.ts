@@ -26,7 +26,7 @@ export const projects = [
     svg: Report,
     about: `Full-stack web application prototype for financial company.
     The application receives the data from database to display the reports on the screen with possibility to export to MS Excel.
-    It also has the authentication functionality`,
+    It also has the authentication functionality.`,
     about_ru: `Прототип full-stack веб приложения для финансовой компании.
     Приложение получает сведения из базы данных, выводит их в виде регуляторной отчетности с возможностью экспортировать в Excel.
     Также в наличии функциональность аутентификации пользователя.`,

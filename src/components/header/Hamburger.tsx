@@ -12,7 +12,7 @@ function Hamburger() {
   };
 
   return (
-    <div className="w-[2.2rem]">
+    <div className="w-[1.6rem] md:w-[2.0rem] lg:w-[2.2rem]">
       <input
         id="burgerHandler"
         type="checkbox"

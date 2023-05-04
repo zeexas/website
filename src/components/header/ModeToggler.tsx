@@ -25,7 +25,7 @@ function ModeToggler() {
   };
 
   return (
-    <div onClick={handleChangeMode} className="cursor-pointer w-[20px]">
+    <div onClick={handleChangeMode} className="cursor-pointer w-[16px] sm:w-[18px] md:w-[20px]">
       {mode === 'dark' && (
         <mo.img
           variants={animeBasic}

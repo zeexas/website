@@ -8,6 +8,7 @@ import {
   animeBasic,
   animeContainerStagger,
   animeItem,
+  animeItemImage,
 } from '../data/animation';
 
 function ProjectDetailPage() {
@@ -18,7 +19,12 @@ function ProjectDetailPage() {
   const params = useParams();
   const project = projects.filter((item) => item.id === params.projectId)[0];
 
-  const backBtnStyle = 'text-2xl italic hover:-translate-x-1 transition';
+  const backBtnStyle =
+    'text-base sm:text-lg md:text-xl lg:text-2xl italic hover:-translate-x-1 transition';
+  const projectLinkStyle = 'font-semibold italic';
+  const projectSubtitleStyle = 'uppercase font-semibold';
+  const projectDescriptionStyle = 'pl-10 sm:pl-0';
+  const linkArrowStyle = 'w-[12px] md:w-[18px]';
 
   return (
     <>
@@ -27,26 +33,21 @@ function ProjectDetailPage() {
           variants={animeContainerStagger}
           initial={'hidden'}
           animate={'show'}
-          className="w-[60%] mx-auto min-h-screen flex flex-col pb-12"
+          className={`w-full px-[5%] md:px-[7%] lg:px-[15%] xl:px-[20%] min-h-screen flex flex-col 
+            pb-6 md:pb-8 lg:pb-12 pt-20 md:pt-28 lg:pt-0`}
         >
-          <mo.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            // transition={{ duration: 1 }}
-            className="w-full h-[600px] overflow-hidden rounded-b-[2.5rem]"
-          >
-            <img
-              src={project.svg}
-              alt={`${project.id} app image`}
-              className="w-full"
-            />
-          </mo.div>
+          <mo.img
+            variants={animeItemImage}
+            src={project.svg}
+            alt={`${project.id} app image`}
+            className="w-full lg:h-[75vh] rounded-[1.8rem] md:rounded-[2rem] lg:rounded-b-[2.5rem] lg:rounded-t-none object-cover object-top"
+          />
           <div className="overflow-hidden">
             <mo.div
               variants={animeItem}
               className="h-fit pb-6 border-solid border-0 border-b-2 flex flex-row flex-nowrap justify-between items-baseline "
             >
-              <h1 className="text-5xl font-bold mt-8 uppercase">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-8 uppercase">
                 {project.name}
               </h1>
               <Link to=".." relative="path">
@@ -66,51 +67,47 @@ function ProjectDetailPage() {
           <div className="overflow-hidden">
             <mo.div
               variants={animeItem}
-              className="grid grid-cols-[25%_1fr] gap-4 mt-4 text-xl"
+              className="grid sm:grid-cols-[25%_1fr] gap-2 md:gap-4 mt-4 text-xs md:text-lg lg:text-xl"
             >
               {langStore === 'en' && (
-                <mo.div
-                  variants={animeBasic}
-                  className="uppercase font-semibold"
-                >
+                <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   about
                 </mo.div>
               )}
               {langStore === 'ru' && (
-                <mo.div
-                  variants={animeBasic}
-                  className="uppercase font-semibold"
-                >
+                <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   о проекте
                 </mo.div>
               )}
               {langStore === 'en' && (
-                <mo.div variants={animeBasic} className="">
+                <mo.div
+                  variants={animeBasic}
+                  className={projectDescriptionStyle}
+                >
                   {project.about}
                 </mo.div>
               )}
               {langStore === 'ru' && (
-                <mo.div variants={animeBasic} className="">
+                <mo.div
+                  variants={animeBasic}
+                  className={projectDescriptionStyle}
+                >
                   {project.about_ru}
                 </mo.div>
               )}
               {langStore === 'en' && (
-                <mo.div
-                  variants={animeBasic}
-                  className="uppercase font-semibold"
-                >
+                <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   technologies
                 </mo.div>
               )}
               {langStore === 'ru' && (
-                <mo.div
-                  variants={animeBasic}
-                  className="uppercase font-semibold"
-                >
+                <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   Технологии
                 </mo.div>
               )}
-              <div className="">{project.tech_stack}</div>
+              <div className={projectDescriptionStyle}>
+                {project.tech_stack}
+              </div>
               <div></div>
               <div className="flex flex-row flex-nowrap gap-10">
                 {project.url && (
@@ -120,12 +117,12 @@ function ProjectDetailPage() {
                         modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight
                       }
                       alt="arrow up right"
-                      className="w-[18px]"
+                      className={linkArrowStyle}
                     />
                     {langStore === 'en' && (
                       <mo.div
                         variants={animeBasic}
-                        className="font-semibold italic"
+                        className={projectLinkStyle}
                       >
                         <a href={project.url} target="_blanc">
                           view project
@@ -135,7 +132,7 @@ function ProjectDetailPage() {
                     {langStore === 'ru' && (
                       <mo.div
                         variants={animeBasic}
-                        className="font-semibold italic"
+                        className={projectLinkStyle}
                       >
                         <a href={project.url} target="_blanc">
                           к проекту
@@ -151,12 +148,12 @@ function ProjectDetailPage() {
                         modeStore === 'dark' ? ArrowUpRight_white : ArrowUpRight
                       }
                       alt="arrow up right"
-                      className="w-[18px]"
+                      className={linkArrowStyle}
                     />
                     {langStore === 'en' && (
                       <mo.div
                         variants={animeBasic}
-                        className="font-semibold italic"
+                        className={projectLinkStyle}
                       >
                         <a href={project.code} target="_blanc">
                           view code
@@ -166,7 +163,7 @@ function ProjectDetailPage() {
                     {langStore === 'ru' && (
                       <mo.div
                         variants={animeBasic}
-                        className="font-semibold italic"
+                        className={projectLinkStyle}
                       >
                         <a href={project.code} target="_blanc">
                           глянуть код
