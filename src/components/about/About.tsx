@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { motion as mo } from 'framer-motion';
 
-import { animeContainerStagger, animeItem } from '../../data/animation';
+import { animeBasic, animeContainerStagger, animeItem } from '../../data/animation';
 import DocumentArrowDown from '../../assets/DocumentArrowDown.svg';
+import Resume from '../../assets/Valery_Li_Resume.pdf'
+import Resume_ru from '../../assets/Valery_Li_Resume_ru.pdf'
 
-import AboutMe from './AboutMe';
+// import AboutMe from './AboutMe';
 import { techsMain, techsOthers } from '../../data/techs';
 
 function About() {
@@ -13,10 +15,11 @@ function About() {
   const modeStore = useSelector((state: any) => state.mode);
   const [aboutTech, setAboutTech] = useState(false);
 
-  const iconStyle =
-    'w-[40px] h-[40px] cursor-pointer grayscale hover:grayscale-0 hover:scale-125 transition duration-200';
-  const iconBlock =
-    'w-[100%] flex flex-row flex-wrap gap-x-10 gap-y-6 mt-6 pl-2';
+  const iconBlock = `w-[100%] flex flex-row flex-wrap gap-x-5 md:gap-x-6 lg:gap-x-10 gap-y-6 mt-6 pl-2`;
+  const iconStyle = `w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] 
+    cursor-pointer grayscale hover:grayscale-0 hover:scale-125 transition duration-200`;
+  const titleStyle = 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2'
+  const resumeLinkStyle = 'flex flex-row flex-nowrap gap-2 cursor-pointer my_underline'
 
   const handleClick = () => {
     setAboutTech(!aboutTech);
@@ -27,14 +30,14 @@ function About() {
       variants={animeContainerStagger}
       initial={'hidden'}
       animate={'show'}
-      className="w-[65%] h-[50%] text-[1.3rem] overflow-hidden"
+      className="w-[75%] md:w-[70%] lg:w-[65%] h-[50%] text-[0.8rem] sm:text-[1rem] md:text-[1.1rem] lg:text-[1.3rem] overflow-hidden"
     >
       <div className="w-full h-full flex flex-col">
         <div className="overflow-hidden">
           {langStore === 'en' && (
             <mo.h2
               variants={animeItem}
-              className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2"
+              className={titleStyle}
             >
               About
             </mo.h2>
@@ -42,7 +45,7 @@ function About() {
           {langStore === 'ru' && (
             <mo.h2
               variants={animeItem}
-              className="text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2"
+              className={titleStyle}
             >
               О себе
             </mo.h2>
@@ -61,7 +64,7 @@ function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
               exit={{ opacity: 0 }}
-              className="w-[90%] mt-8"
+              className="w-[100%] lg:w-[90%] mt-8"
             >
               Hi, my name is Valery Li and I'm a front-end engineer who has
               experience in building back-end infrastructure too. I also have
@@ -101,15 +104,15 @@ function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
               exit={{ opacity: 0 }}
-              className="mt-8"
+              className="mt-4 sm:mt-6 lg:mt-8"
             >
               {langStore === 'en' && (
-                <mo.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <mo.div variants={animeBasic} initial={'hidden'} animate={'show'}>
                   Technologies I use for creating web applications
                 </mo.div>
               )}
               {langStore === 'ru' && (
-                <mo.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <mo.div variants={animeBasic} initial={'hidden'} animate={'show'}>
                   Технологии, с которыми я уже работал
                 </mo.div>
               )}
@@ -153,10 +156,12 @@ function About() {
               variants={animeItem}
               className="flex flex-row gap-16 items-start"
             >
-              <div className="flex flex-row flex-nowrap gap-2 cursor-pointer my_underline">
-                <img src={DocumentArrowDown} alt="arrow down" className="w-5" />
-                <div>resume</div>
-              </div>
+              <a href={Resume} target='_blanc' rel='noreferrer'>
+                <div className={resumeLinkStyle}>
+                  <img src={DocumentArrowDown} alt="arrow down" className="w-5" />
+                  <div>resume</div>
+                </div>
+              </a>
               <button onClick={handleClick} className="">
                 next
               </button>
@@ -167,10 +172,12 @@ function About() {
               variants={animeItem}
               className="flex flex-row gap-16 items-center"
             >
-              <div className="flex flex-row flex-nowrap gap-2 cursor-pointer my_underline">
-                <img src={DocumentArrowDown} alt="arrow down" className="w-5" />
-                <span>резюме</span>
-              </div>
+              <a href={Resume_ru} target='_blanc' rel='noreferrer'>
+                <div className={resumeLinkStyle}>
+                  <img src={DocumentArrowDown} alt="arrow down" className="w-5" />
+                  <span>резюме</span>
+                </div>
+              </a>
               <button onClick={handleClick}>дальше</button>
             </mo.div>
           )}
