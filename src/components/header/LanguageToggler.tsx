@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion as mo } from 'framer-motion';
-import { headerActions } from '../../store';
+
+import { headerActions, storeState } from '../../store';
 import { animeBasic } from '../../data/animation';
 
 function LanguageToggler() {
   const dispatch = useDispatch();
-  const langStore = useSelector((state: any) => state.language);
+  const langStore = useSelector((state: storeState) => state.language);
   const [lang, setLang] = useState(langStore);
 
   const handleChangeLang = () => {

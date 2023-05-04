@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { headerActions } from '../../store';
+
+import { headerActions, storeState } from '../../store';
 import classes from './Header.module.css';
 
 function Hamburger() {
   const dispatch = useDispatch();
-
-  const showMenu = useSelector((state: any) => state.showMenu);
+  const showMenu = useSelector((state: storeState) => state.showMenu);
 
   const handleBurger = () => {
     dispatch(showMenu ? headerActions.closeMenu() : headerActions.openMenu());

@@ -1,20 +1,14 @@
 :root {
-  --color-teal-100: #ccfbf1;
   --color-teal-700: #0f766e;
-  --color-teal-800: #115e59;
   --color-teal-900: #134e4a;
-  --color-emerald-50: #ecfdf5;
   --color-emerald-100: #d1fae5;
-  --color-cyan-50: #ecfeff;
-  --color-cyan-700: #0e7490;
   --main-color: var(--color-teal-700)
 }
 
 body {
   color: var(--main-color);
-  background-color: var(--color-cyan-50);
-  background-color: var(--color-emerald-50);
   background-color: var(--color-emerald-100);
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {

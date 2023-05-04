@@ -1,20 +1,22 @@
 import { Link, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { motion as mo } from 'framer-motion';
+
 import { projects } from '../data/projects';
 import ArrowUpRight from '../assets/ArrowUpRight.svg';
 import ArrowUpRight_white from '../assets/ArrowUpRight_white.svg';
-import { useSelector } from 'react-redux';
-import { motion as mo } from 'framer-motion';
 import {
   animeBasic,
   animeContainerStagger,
   animeItem,
   animeItemImage,
 } from '../data/animation';
+import { storeState } from '../store';
 
 function ProjectDetailPage() {
-  const showMenu = useSelector((state: any) => state.showMenu);
-  const langStore = useSelector((state: any) => state.language);
-  const modeStore = useSelector((state: any) => state.mode);
+  const showMenu = useSelector((state: storeState) => state.showMenu);
+  const langStore = useSelector((state: storeState) => state.language);
+  const modeStore = useSelector((state: storeState) => state.mode);
 
   const params = useParams();
   const project = projects.filter((item) => item.id === params.projectId)[0];

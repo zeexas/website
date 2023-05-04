@@ -1,8 +1,10 @@
 import { useSelector } from 'react-redux';
+
 import Intro from '../components/Intro';
+import { storeState } from '../store';
 
 function HomePage() {
-  const showMenu = useSelector((state: any) => state.showMenu);
+  const showMenu = useSelector((state: storeState) => state.showMenu);
 
   return (
     <>

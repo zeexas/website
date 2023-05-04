@@ -1,10 +1,12 @@
-import { motion as mo } from 'framer-motion';
 import { useSelector } from 'react-redux';
+import { motion as mo } from 'framer-motion';
+
 import { animeContainer, animeItem } from '../data/animation';
+import { storeState } from '../store';
 
 function ContactPage() {
-  const showMenu = useSelector((state: any) => state.showMenu);
-  const langStore = useSelector((state: any) => state.language);
+  const showMenu = useSelector((state: storeState) => state.showMenu);
+  const langStore = useSelector((state: storeState) => state.language);
 
   const animeBoxStyle = 'overflow-hidden h-fit'
   const h3Style = 'uppercase inline-block font-bold';

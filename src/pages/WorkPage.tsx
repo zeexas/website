@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { easeOut, motion as mo } from 'framer-motion';
+import { motion as mo } from 'framer-motion';
 
 import classes from './Work.module.css';
 import RightArrow from '../assets/RightArrow.svg';
 import RightArrow_white from '../assets/RightArrow_white.svg';
 import { projects } from '../data/projects';
 import { animeContainerStagger, animeItem } from '../data/animation';
+import { storeState } from '../store';
 
 function WorkPage() {
-  const showMenu = useSelector((state: any) => state.showMenu);
-  const langStore = useSelector((state: any) => state.language);
-  const modeStore = useSelector((state: any) => state.mode);
+  const showMenu = useSelector((state: storeState) => state.showMenu);
+  const langStore = useSelector((state: storeState) => state.language);
+  const modeStore = useSelector((state: storeState) => state.mode);
 
   const [countries, setCountries] = useState(false);
   const [report, setReport] = useState(false);

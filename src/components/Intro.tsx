@@ -1,9 +1,10 @@
 import { motion as mo } from 'framer-motion';
 import { animeBasic, animeContainerStagger, animeItem } from '../data/animation';
 import { useSelector } from 'react-redux';
+import { storeState } from '../store';
 
 function Intro() {
-  const langStore = useSelector((state: any) => state.language);
+  const langStore = useSelector((state: storeState) => state.language);
 
   return (
     <mo.section
@@ -14,24 +15,24 @@ function Intro() {
     >
       <div className="overflow-hidden p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
         {langStore === 'en' && (
-          <mo.p variants={animeItem} className="">
+          <mo.p variants={animeItem}>
             Hi, I am Valery Li
           </mo.p>
         )}
         {langStore === 'ru' && (
-          <mo.p variants={animeItem} className="">
+          <mo.p variants={animeItem}>
             Привет, меня зовут Валерий!
           </mo.p>
         )}
       </div>
       <div className="overflow-hidden mt-6 text-sm sm:text-base md:text-xl lg:text-2xl">
         {langStore === 'en' && (
-          <mo.p variants={animeItem} className="">
+          <mo.p variants={animeItem}>
             I'm a front-end engineer
           </mo.p>
         )}
         {langStore === 'ru' && (
-          <mo.p variants={animeItem} className="">
+          <mo.p variants={animeItem}>
             Я фронтенд разработчик
           </mo.p>
         )}
