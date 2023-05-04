@@ -170,7 +170,7 @@ function About() {
           {langStore === 'ru' && (
             <mo.div
               variants={animeItem}
-              className="flex flex-row gap-16 items-center"
+              className="flex flex-row gap-16 items-start"
             >
               <a href={Resume_ru} target='_blanc' rel='noreferrer'>
                 <div className={resumeLinkStyle}>
