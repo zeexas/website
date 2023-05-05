@@ -4,8 +4,8 @@ import { motion as mo } from 'framer-motion';
 
 import { animeBasic, animeContainerStagger, animeItem } from '../../data/animation';
 import DocumentArrowDown from '../../assets/DocumentArrowDown.svg';
-import Resume from '../../assets/Valery_Li_Resume.pdf'
-import Resume_ru from '../../assets/Valery_Li_Resume_ru.pdf'
+import Resume from '../../assets/valery_li_resume.pdf'
+import Resume_ru from '../../assets/valery_li_resume_ru.pdf'
 // import AboutMe from './AboutMe';
 import { techsMain, techsOthers } from '../../data/techs';
 import { storeState } from '../../store';
