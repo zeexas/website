@@ -11,7 +11,7 @@ import Reactlogo from '../assets/techs/react.svg';
 import Reduxlogo from '../assets/techs/redux.svg';
 import Next from '../assets/techs/next-js.svg';
 import Vuelogo from '../assets/techs/vue.svg';
-import Npm from '../assets/techs/Npm-logo.svg';
+import Npm from '../assets/techs/npm.svg';
 import Yarn from '../assets/techs/yarn.svg';
 import Git from '../assets/techs/git.svg';
 import Github from '../assets/techs/github.svg';
