@@ -66,7 +66,7 @@ function About() {
               exit={{ opacity: 0 }}
               className="w-[100%] lg:w-[90%] mt-8"
             >
-              Hi, my name is Valery Li and I'm a front-end engineer (2+ yaers) who has
+              Hi, my name is Valery Li and I'm a front-end engineer (2+ years) who has
               experience in building back-end infrastructure too. I also have
               wide experience (10+ years) in finance creating budgets and
               financial statements and understand all business processes in
