@@ -2,7 +2,7 @@
   width: fit-content;
   position: relative;
   cursor: pointer;
-  color: var(--main-color);
+  margin-bottom: 8px;
 }
 
 .nav_li::after {
@@ -12,7 +12,7 @@
   transform: scaleX(0);
   left: 0;
   bottom: -8px;
-  border-bottom: 3px solid var(--main-color);
+  border-bottom: 3px solid;
   transform-origin: bottom left;
   transition: transform 0.25s 0.1s ease-out;
 }

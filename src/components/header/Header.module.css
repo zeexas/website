@@ -1,5 +1,4 @@
 .burger {
-  /* width: 3rem; */
   cursor: pointer;
 }
 
@@ -10,7 +9,7 @@
   display: block;
   height: 7px;
   border-radius: 5px;
-  border: 2px solid darkslategray;
+  border: 2px solid #134e4a;
   margin: 1px 0;
   transition: 0.2s ease-in-out;
 }
@@ -25,4 +24,27 @@ input[type='checkbox']:checked + .burger:after {
 
 input[type='checkbox']:checked + .burger div div {
   transform: scale(0);
+}
+
+@media (max-width: 1024px) {
+  .burger:before,
+  .burger:after,
+  .burger div div {
+    height: 6px;
+  }
+  input[type='checkbox']:checked + .burger:before {
+    transform: translateY(8px) rotate(135deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .burger:before,
+  .burger:after,
+  .burger div div {
+    height: 5px;
+    border-width: 1px;
+  }
+  input[type='checkbox']:checked + .burger:before {
+    transform: translateY(6px) rotate(135deg);
+  }
 }
