@@ -12,7 +12,7 @@ function ErrorPage() {
   const langStore = useSelector((state: storeState) => state.language);
   const mode = useSelector((state: storeState) => state.mode);
 
-  const error_style = `w-full min-h-screen flex flex-col gap-4 items-center justify-center text-center text-3xl font-bold`;
+  const error_style = `w-full min-h-screen flex flex-col gap-4 items-center justify-center text-center text-3xl font-medium`;
 
   return (
     <div className={`w-full h-screen ${mode}`}>

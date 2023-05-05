@@ -24,7 +24,7 @@ function Navigation() {
           variants={animeContainerStagger}
           initial={'hidden'}
           animate={'show'}
-          className="flex flex-col gap-1 text-4xl sm:text-5xl sm:gap-2 lg:text-7xl lg:gap-4 uppercase font-semibold"
+          className="flex flex-col gap-1 sm:gap-2 lg:gap-4 text-4xl sm:text-5xl lg:text-6xl uppercase font-semibold"
         >
           <div className="overflow-hidden">
             <Link to="/" onClick={handleClickLink}>

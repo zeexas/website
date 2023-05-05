@@ -9,9 +9,9 @@ function ContactPage() {
   const langStore = useSelector((state: storeState) => state.language);
 
   const animeBoxStyle = 'overflow-hidden h-fit'
-  const h3Style = 'uppercase inline-block font-bold';
+  const h3Style = 'uppercase inline-block font-medium';
   const title_style =
-    'text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2';
+    'text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-medium pb-4 border-solid border-0 border-b-2';
 
   return (
     <>
@@ -49,6 +49,7 @@ function ContactPage() {
                     <a
                       href="mailto:lee_hobb@rambler.ru"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       lee_hobb@rambler.ru
                     </a>
@@ -67,6 +68,7 @@ function ContactPage() {
                       variants={animeItem}
                       href="https://github.com/zeexas"
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block my_underline"
                     >
                       github
@@ -77,6 +79,7 @@ function ContactPage() {
                       variants={animeItem}
                       href="https://www.linkedin.com/in/zeexas/"
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block my_underline"
                     >
                       linkedin

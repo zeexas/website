@@ -13,7 +13,7 @@ function Intro() {
       animate={'show'}
       className={`w-[80%] bg-slate-0 h-1/2 text-center absolute top-[35%] left-[50%] -translate-x-1/2 my-auto p-6`}
     >
-      <div className="overflow-hidden p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <div className="overflow-hidden p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium">
         {langStore === 'en' && (
           <mo.p variants={animeItem}>
             Hi, I am Valery Li
@@ -37,7 +37,7 @@ function Intro() {
           </mo.p>
         )}
       </div>
-      <div className="absolute bottom-0 text-sm sm:text-base overflow-hidden">
+      <div className="absolute -bottom-14 text-xs sm:text-sm overflow-hidden">
         {langStore === 'en' && <mo.div variants={animeBasic}>Design is under development...</mo.div>}
         {langStore === 'ru' && <mo.div variants={animeBasic}>Дизайн в разработке...</mo.div>}
       </div>
