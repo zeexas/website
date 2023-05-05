@@ -1,4 +1,4 @@
-import Countries from '../assets/work/countries.svg';
+import Countries from '../assets/work/Countries.svg';
 import Report from '../assets/work/Report.svg';
 import Website from '../assets/work/Website.svg';
 import Bulls from '../assets/work/BullCow.svg';
