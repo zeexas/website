@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <header
-      className={`font-semibold text-xs sm:text-sm md:text-base uppercase fixed z-10 left-0 right-0 
+      className={`font-medium text-xs sm:text-sm md:text-base uppercase fixed z-10 left-0 right-0 
       flex flex-row flex-nowrap justify-between items-center px-10 md:px-16 lg:px-24 py-4 mt-6 md:mt-12 lg:mt-20 ${darkStyle_base}`}
     >
       <Link to="/" onClick={handleClickHome}>

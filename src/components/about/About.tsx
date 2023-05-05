@@ -18,7 +18,7 @@ function About() {
   const iconBlock = `w-[100%] flex flex-row flex-wrap gap-x-5 md:gap-x-6 lg:gap-x-10 gap-y-6 mt-6 pl-2`;
   const iconStyle = `w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] 
     cursor-pointer grayscale hover:grayscale-0 hover:scale-125 transition duration-200`;
-  const titleStyle = 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold pb-4 border-solid border-0 border-b-2'
+  const titleStyle = 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-medium pb-4 border-solid border-0 border-b-2'
   const resumeLinkStyle = 'flex flex-row flex-nowrap gap-2 cursor-pointer my_underline'
 
   const handleClick = () => {
@@ -66,12 +66,12 @@ function About() {
               exit={{ opacity: 0 }}
               className="w-[100%] lg:w-[90%] mt-8"
             >
-              Hi, my name is Valery Li and I'm a front-end engineer who has
+              Hi, my name is Valery Li and I'm a front-end engineer (2+ yaers) who has
               experience in building back-end infrastructure too. I also have
               wide experience (10+ years) in finance creating budgets and
               financial statements and understand all business processes in
               companies. I am passionate about learning new technologies and
-              finding solutions in non-standard tasks. In my childhood I was
+              finding solutions in non-standard tasks. From the very childhood I've been
               crazy about chess, but now I prefer billiards more. <br />
               My latest achivements: ~ created full-stack app prototype for
               financial company ~ ran a half marathon in Almaty (april, 2023)
@@ -85,13 +85,12 @@ function About() {
               exit={{ opacity: 0 }}
               className="w-[90%] mt-8"
             >
-              Привет, меня зовут Валерий и я - фронтенд разработчик (2+ года
-              опыта), также имеющий опыт создания серверной части приложений
-              (бэкенд). У меня богатый опыт (10+ лет) работы в финансовой сфере
-              (бюджетирование, финансовое планирование и различные виды
-              отчетностей) и глубокое понимание бизнес процессов компаний.
+              Привет, меня зовут Валерий, я - фронтенд разработчик (2+ года)
+              также имеющий опыт создания серверной части приложений
+              (бэкенд). Более 10 лет в финансовой сфере занимался бюджетированием, финансовым планированием
+              и различными видами отчетности, глубоко пониманию бизнес процессы компаний.
               Обожаю изучать новые технологии и находить решения нестандартных
-              задач. С детства играю в шахматы, но сейчас больше предпочитаю
+              задач. С детства увлечен шахматами, но сейчас больше предпочитаю
               бильярд. <br />
               Мои последние достижения: ~ разработал прототип full-stack
               приложения для финансовой компании ~ пробежал полумарафон в Алматы
@@ -113,13 +112,13 @@ function About() {
               )}
               {langStore === 'ru' && (
                 <mo.div variants={animeBasic} initial={'hidden'} animate={'show'}>
-                  Технологии, с которыми я уже работал
+                  Мой набор инструментов
                 </mo.div>
               )}
 
               <div className={`${iconBlock}`}>
                 {techsMain.map((item: any) => (
-                  <a key={item.id} href={item.url} target="_blanc">
+                  <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer">
                     <img
                       src={item.svg}
                       alt={`${item.name} logo`}
@@ -131,7 +130,7 @@ function About() {
               </div>
               <div className={`${iconBlock}`}>
                 {techsOthers.map((item: any) => (
-                  <a key={item.id} href={item.url} target="_blanc">
+                  <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer">
                     <img
                       src={
                         item.name !== 'prisma'
@@ -156,14 +155,14 @@ function About() {
               variants={animeItem}
               className="flex flex-row gap-16 items-start"
             >
-              <a href={Resume} target='_blanc' rel='noreferrer'>
+              <a href={Resume} target='_blank' rel='noreferrer'>
                 <div className={resumeLinkStyle}>
                   <img src={DocumentArrowDown} alt="arrow down" className="w-5" />
                   <div>resume</div>
                 </div>
               </a>
               <button onClick={handleClick} className="">
-                next
+                more
               </button>
             </mo.div>
           )}
@@ -172,13 +171,13 @@ function About() {
               variants={animeItem}
               className="flex flex-row gap-16 items-start"
             >
-              <a href={Resume_ru} target='_blanc' rel='noreferrer'>
+              <a href={Resume_ru} target='_blank' rel='noreferrer'>
                 <div className={resumeLinkStyle}>
                   <img src={DocumentArrowDown} alt="arrow down" className="w-5" />
                   <span>резюме</span>
                 </div>
               </a>
-              <button onClick={handleClick}>дальше</button>
+              <button onClick={handleClick}>хочу ещё</button>
             </mo.div>
           )}
         </div>

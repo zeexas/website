@@ -48,9 +48,10 @@ function ProjectDetailPage() {
           <div className="overflow-hidden">
             <mo.div
               variants={animeItem}
-              className="h-fit pb-6 border-solid border-0 border-b-2 flex flex-row flex-nowrap justify-between items-baseline "
+              className={`h-fit pb-2 sm:pb-4 md:pb-6 border-solid border-0 border-b-2 
+                flex flex-row flex-nowrap justify-between items-baseline`}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-8 uppercase">
+              <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mt-6 md:mt-10 lg:mt-12 uppercase`}>
                 {project.name}
               </h1>
               <Link to=".." relative="path">
@@ -70,7 +71,7 @@ function ProjectDetailPage() {
           <div className="overflow-hidden">
             <mo.div
               variants={animeItem}
-              className="grid sm:grid-cols-[25%_1fr] gap-2 md:gap-4 mt-4 text-xs md:text-lg lg:text-xl"
+              className="grid sm:grid-cols-[25%_1fr] gap-2 md:gap-4 mt-4 md:mt-6 text-xs md:text-lg lg:text-xl"
             >
               {langStore === 'en' && (
                 <mo.div variants={animeBasic} className={projectSubtitleStyle}>
@@ -112,7 +113,7 @@ function ProjectDetailPage() {
                 {project.tech_stack}
               </div>
               <div></div>
-              <div className="flex flex-row flex-nowrap gap-10">
+              <div className={`flex flex-row flex-nowrap gap-10 ${projectDescriptionStyle}`}>
                 {project.url && (
                   <div className="my_underline flex flex-row flex-nowrap gap-2 items-end">
                     <img
@@ -127,7 +128,7 @@ function ProjectDetailPage() {
                         variants={animeBasic}
                         className={projectLinkStyle}
                       >
-                        <a href={project.url} target="_blanc">
+                        <a href={project.url} target="_blank" rel="noopener noreferrer">
                           view project
                         </a>
                       </mo.div>
@@ -137,7 +138,7 @@ function ProjectDetailPage() {
                         variants={animeBasic}
                         className={projectLinkStyle}
                       >
-                        <a href={project.url} target="_blanc">
+                        <a href={project.url} target="_blank" rel="noopener noreferrer">
                           к проекту
                         </a>
                       </mo.div>
@@ -158,7 +159,7 @@ function ProjectDetailPage() {
                         variants={animeBasic}
                         className={projectLinkStyle}
                       >
-                        <a href={project.code} target="_blanc">
+                        <a href={project.code} target="_blank" rel="noopener noreferrer">
                           view code
                         </a>
                       </mo.div>
@@ -168,7 +169,7 @@ function ProjectDetailPage() {
                         variants={animeBasic}
                         className={projectLinkStyle}
                       >
-                        <a href={project.code} target="_blanc">
+                        <a href={project.code} target="_blank" rel="noopener noreferrer">
                           глянуть код
                         </a>
                       </mo.div>

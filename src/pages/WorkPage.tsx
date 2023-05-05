@@ -22,11 +22,11 @@ function WorkPage() {
   const [momentum, setMomentum] = useState(false);
   const [art, setArt] = useState(false);
 
-  const titleStyle = `text-3xl sm:text-4xl md:text-5xl font-bold uppercase pb-6 
+  const titleStyle = `text-3xl sm:text-4xl md:text-5xl font-semibold uppercase pb-6 
     border-solid border-0 border-slate-500 border-b md:border-b-2`;
   const workItemStyle =
     'flex flex-row flex-nowrap cursor-pointer justify-between items-center group';
-  const workItemTitle = 'py-3 sm:py-4 md:py-6 text-base sm:text-xl md:text-2xl font-bold flex flex-row gap-2';
+  const workItemTitle = 'py-3 sm:py-4 md:py-6 text-base sm:text-xl md:text-2xl font-medium flex flex-row gap-2';
   const workItemStyleAnime = 'animate-freeItem group-hover:animate-hoverItem';
 
   const projectsStateSet: any = {
