@@ -33,7 +33,7 @@ function Intro() {
         )}
         {langStore === 'ru' && (
           <mo.p variants={animeItem}>
-            Я фронтенд разработчик
+            Я - фронтенд разработчик
           </mo.p>
         )}
       </div>
