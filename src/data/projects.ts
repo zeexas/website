@@ -16,7 +16,7 @@ export const projects = [
     about_ru: `Как много Вы знаете о странах, которые можете назвать?
     Исследуйте мир и выберите свой пункт назначения на следующий отпуск.`,
     tech_stack: 'HTML, CSS, Vue 3, vue-router, Tailwind CSS, Vite, npm, responsive',
-    url: 'https://zeexas.github.io/rest-countries/',
+    url: 'https://lee-rest-countries.netlify.app/',
     code: 'https://github.com/zeexas/rest-countries',
   },
   {
