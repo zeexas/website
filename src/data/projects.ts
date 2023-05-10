@@ -41,7 +41,7 @@ export const projects = [
     svg: Website,
     about: `This website you are browsing now is a basic project for my portfolio. Inspired by Sharlee`,
     about_ru: `Этот сайт, который Вы в настоящее время исследуете, является базовым проектом моего портфолио. Вдохновлен Sharlee`,
-    tech_stack: 'HTML, CSS, React, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive',
+    tech_stack: 'HTML, CSS, React, TypeScript, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive',
     url: null,
     code: 'https://github.com/zeexas/website',
   },
