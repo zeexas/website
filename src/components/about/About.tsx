@@ -4,8 +4,8 @@ import { motion as mo } from 'framer-motion';
 
 import { animeBasic, animeContainerStagger, animeItem } from '../../data/animation';
 import DocumentArrowDown from '../../assets/DocumentArrowDown.svg';
-import Resume from '../../assets/valery_li_resume.pdf'
-import Resume_ru from '../../assets/valery_li_resume_ru.pdf'
+import Resume from '../../assets/valery_li_resume_web.pdf'
+import Resume_ru from '../../assets/valery_li_resume_web_ru.pdf'
 // import AboutMe from './AboutMe';
 import { techsMain, techsOthers } from '../../data/techs';
 import { storeState } from '../../store';
@@ -177,7 +177,7 @@ function About() {
                   <span>резюме</span>
                 </div>
               </a>
-              <button onClick={handleClick}>хочу ещё</button>
+              <button onClick={handleClick}>ещё</button>
             </mo.div>
           )}
         </div>
