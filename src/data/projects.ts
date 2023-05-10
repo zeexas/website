@@ -28,7 +28,7 @@ export const projects = [
     The application receives the data from database to display the reports on the screen with possibility to export to MS Excel.
     It also has the authentication functionality.`,
     about_ru: `Прототип full-stack веб приложения для финансовой компании.
-    Приложение получает сведения из базы данных, выводит их в виде регуляторной отчетности с возможностью экспортировать в Excel.
+    Приложение получает сведения из базы данных, выводит их в виде отчетности с возможностью экспортировать в Excel.
     Также в наличии функциональность аутентификации пользователя.`,
     tech_stack: 'React, react-router-dom, TypeScript, Tailwind CSS, Webpack, Nest.js, passport, Prisma, PostgreSQL, REST, yarn, responsive',
     url: null,
@@ -51,7 +51,7 @@ export const projects = [
     base_tech: 'vanilla',
     svg: ArtQuiz,
     about: `Hundreds of world masterpieces are collected in this game, where you
-    can test you knowledge in art. And don't forget to
+    can test your knowledge in art. And don't forget to
     check out the settings.`,
     about_ru: `Сотни шедевров живописи собраны в этой игре, где Вы можете проверить свои познания в данном виде искусства.
     И не забудьте заглянуть в настройки.`,
