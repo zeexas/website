@@ -136,12 +136,12 @@ function WorkPage() {
             <div className="w-[80%] mx-auto lg:w-1/2 h-full">
               <div className="lg:w-[75%] h-full flex flex-col">
                 <div className="overflow-hidden pb-4">
-                  {langStore === 'en' && (
+                  {langStore === 'ru' && (
                     <mo.h3 variants={animeItem} className={titleStyle}>
                       Projects
                     </mo.h3>
                   )}
-                  {langStore === 'ru' && (
+                  {langStore === 'en' && (
                     <mo.h3 variants={animeItem} className={titleStyle}>
                       Проекты
                     </mo.h3>

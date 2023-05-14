@@ -28,40 +28,40 @@ function Navigation() {
         >
           <div className="overflow-hidden">
             <Link to="/" onClick={handleClickLink}>
-              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
                 Home
               </mo.li>}
-              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
                 Главная
               </mo.li>}
             </Link>
           </div>
           <div className="overflow-hidden">
             <Link to="work" onClick={handleClickLink}>
-              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
                 Work
               </mo.li>}
-              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
                 Проекты
               </mo.li>}
             </Link>
           </div>
           <div className="overflow-hidden">
             <Link to="about" onClick={handleClickLink}>
-              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
                 About
               </mo.li>}
-              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
                 О себе
               </mo.li>}
             </Link>
           </div>
           <div className="overflow-hidden">
             <Link to="contact" onClick={handleClickLink}>
-              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
                 Contact
               </mo.li>}
-              {langStore === 'ru' && <mo.li variants={animeItem} className={classes.nav_li}>
+              {langStore === 'en' && <mo.li variants={animeItem} className={classes.nav_li}>
                 Контакты
               </mo.li>}
             </Link>

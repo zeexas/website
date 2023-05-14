@@ -25,12 +25,12 @@ function ContactPage() {
             className="w-[80%] md:w-[75%] lg:w-[65%] h-[40%] flex flex-col text-[1rem] md:text-[1.1rem] lg:text-[1.3rem]"
           >
             <div className={animeBoxStyle}>
-              {langStore === 'en' && (
+              {langStore === 'ru' && (
                 <mo.h2 variants={animeItem} className={title_style}>
                   Contact
                 </mo.h2>
               )}
-              {langStore === 'ru' && (
+              {langStore === 'en' && (
                 <mo.h2 variants={animeItem} className={title_style}>
                   Контакты
                 </mo.h2>
