@@ -34,7 +34,7 @@ function About() {
     >
       <div className="w-full h-full flex flex-col">
         <div className="overflow-hidden">
-          {langStore === 'en' && (
+          {langStore === 'ru' && (
             <mo.h2
               variants={animeItem}
               className={titleStyle}
@@ -42,7 +42,7 @@ function About() {
               About
             </mo.h2>
           )}
-          {langStore === 'ru' && (
+          {langStore === 'en' && (
             <mo.h2
               variants={animeItem}
               className={titleStyle}
@@ -58,7 +58,7 @@ function About() {
           exit={{ opacity: 0 }}
         >
           {/* <AboutMe lang={langStore} aboutTech={aboutTech} /> */}
-          {!aboutTech && langStore === 'en' && (
+          {!aboutTech && langStore === 'ru' && (
             <mo.section
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -77,7 +77,7 @@ function About() {
               financial company ~ ran a half marathon in Almaty (april, 2023)
             </mo.section>
           )}
-          {!aboutTech && langStore === 'ru' && (
+          {!aboutTech && langStore === 'en' && (
             <mo.section
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -105,12 +105,12 @@ function About() {
               exit={{ opacity: 0 }}
               className="mt-4 sm:mt-6 lg:mt-8"
             >
-              {langStore === 'en' && (
+              {langStore === 'ru' && (
                 <mo.div variants={animeBasic} initial={'hidden'} animate={'show'}>
                   Technologies I use for creating web applications
                 </mo.div>
               )}
-              {langStore === 'ru' && (
+              {langStore === 'en' && (
                 <mo.div variants={animeBasic} initial={'hidden'} animate={'show'}>
                   Мой набор инструментов
                 </mo.div>
@@ -150,7 +150,7 @@ function About() {
           )}
         </mo.div>
         <div className="w-fit mt-16 overflow-hidden h-fit">
-          {langStore === 'en' && (
+          {langStore === 'ru' && (
             <mo.div
               variants={animeItem}
               className="flex flex-row gap-16 items-start"
@@ -166,7 +166,7 @@ function About() {
               </button>
             </mo.div>
           )}
-          {langStore === 'ru' && (
+          {langStore === 'en' && (
             <mo.div
               variants={animeItem}
               className="flex flex-row gap-16 items-start"

@@ -19,7 +19,7 @@ function ErrorPage() {
       <Header />
       <section className={`w-full h-full ${darkStyle_bg} ${darkStyle_base}`}>
         {showMenu && <Navigation />}
-        {!showMenu && langStore === 'en' && (
+        {!showMenu && langStore === 'ru' && (
           <mo.main
             key="error"
             initial={{ opacity: 0 }}
@@ -30,7 +30,7 @@ function ErrorPage() {
             <p>Could not find this page!</p>
           </mo.main>
         )}
-        {!showMenu && langStore === 'ru' && (
+        {!showMenu && langStore === 'en' && (
           <mo.main
             key="error_ru"
             initial={{ opacity: 0 }}

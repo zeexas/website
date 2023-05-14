@@ -8,7 +8,7 @@ export type storeState = {
 
 const initialState: storeState = {
   showMenu: false,
-  language: localStorage.getItem('lang') || 'en',
+  language: localStorage.getItem('lang') || 'ru',
   mode: localStorage.getItem('mode') || 'dark'
 };
 

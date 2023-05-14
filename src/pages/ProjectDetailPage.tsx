@@ -55,12 +55,12 @@ function ProjectDetailPage() {
                 {project.name}
               </h1>
               <Link to=".." relative="path">
-                {langStore === 'en' && (
+                {langStore === 'ru' && (
                   <mo.p variants={animeBasic} className={backBtnStyle}>
                     back
                   </mo.p>
                 )}
-                {langStore === 'ru' && (
+                {langStore === 'en' && (
                   <mo.p variants={animeBasic} className={backBtnStyle}>
                     назад
                   </mo.p>
@@ -73,17 +73,17 @@ function ProjectDetailPage() {
               variants={animeItem}
               className="grid sm:grid-cols-[25%_1fr] gap-2 md:gap-4 mt-4 md:mt-6 text-xs md:text-lg lg:text-xl"
             >
-              {langStore === 'en' && (
+              {langStore === 'ru' && (
                 <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   about
                 </mo.div>
               )}
-              {langStore === 'ru' && (
+              {langStore === 'en' && (
                 <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   о проекте
                 </mo.div>
               )}
-              {langStore === 'en' && (
+              {langStore === 'ru' && (
                 <mo.div
                   variants={animeBasic}
                   className={projectDescriptionStyle}
@@ -91,7 +91,7 @@ function ProjectDetailPage() {
                   {project.about}
                 </mo.div>
               )}
-              {langStore === 'ru' && (
+              {langStore === 'en' && (
                 <mo.div
                   variants={animeBasic}
                   className={projectDescriptionStyle}
@@ -99,12 +99,12 @@ function ProjectDetailPage() {
                   {project.about_ru}
                 </mo.div>
               )}
-              {langStore === 'en' && (
+              {langStore === 'ru' && (
                 <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   technologies
                 </mo.div>
               )}
-              {langStore === 'ru' && (
+              {langStore === 'en' && (
                 <mo.div variants={animeBasic} className={projectSubtitleStyle}>
                   Технологии
                 </mo.div>
@@ -123,7 +123,7 @@ function ProjectDetailPage() {
                       alt="arrow up right"
                       className={linkArrowStyle}
                     />
-                    {langStore === 'en' && (
+                    {langStore === 'ru' && (
                       <mo.div
                         variants={animeBasic}
                         className={projectLinkStyle}
@@ -133,7 +133,7 @@ function ProjectDetailPage() {
                         </a>
                       </mo.div>
                     )}
-                    {langStore === 'ru' && (
+                    {langStore === 'en' && (
                       <mo.div
                         variants={animeBasic}
                         className={projectLinkStyle}
@@ -154,7 +154,7 @@ function ProjectDetailPage() {
                       alt="arrow up right"
                       className={linkArrowStyle}
                     />
-                    {langStore === 'en' && (
+                    {langStore === 'ru' && (
                       <mo.div
                         variants={animeBasic}
                         className={projectLinkStyle}
@@ -164,7 +164,7 @@ function ProjectDetailPage() {
                         </a>
                       </mo.div>
                     )}
-                    {langStore === 'ru' && (
+                    {langStore === 'en' && (
                       <mo.div
                         variants={animeBasic}
                         className={projectLinkStyle}
