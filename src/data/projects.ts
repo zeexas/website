@@ -15,7 +15,7 @@ export const projects = [
     Browse the world and choose your next holiday destination.`,
     about_ru: `Как много Вы знаете о странах, которые можете назвать?
     Исследуйте мир и выберите свой пункт назначения на следующий отпуск.`,
-    tech_stack: 'HTML, CSS, Vue 3, Vuex, vue-router, Tailwind CSS, Vite, npm, responsive',
+    tech_stack: 'HTML, CSS, Vue 3, Vuex, vue-router, Tailwind CSS, Vite, npm, responsive, mobile-first',
     url: 'https://lee-rest-countries.netlify.app/',
     code: 'https://github.com/zeexas/rest-countries',
   },
@@ -41,7 +41,7 @@ export const projects = [
     svg: Website,
     about: `This website you are browsing now is a basic project for my portfolio. Inspired by Sharlee`,
     about_ru: `Этот сайт, который Вы в настоящее время исследуете, является базовым проектом моего портфолио. Вдохновлен Sharlee`,
-    tech_stack: 'HTML, CSS, React, TypeScript, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive',
+    tech_stack: 'HTML, CSS, React, TypeScript, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive, mobile-first',
     url: null,
     code: 'https://github.com/zeexas/website',
   },
