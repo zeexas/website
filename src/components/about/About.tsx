@@ -30,7 +30,7 @@ function About() {
       variants={animeContainerStagger}
       initial={'hidden'}
       animate={'show'}
-      className="w-[75%] md:w-[70%] lg:w-[65%] h-[50%] text-[0.8rem] sm:text-[1rem] md:text-[1.1rem] lg:text-[1.3rem] overflow-hidden"
+      className="w-[75%] md:w-[70%] lg:w-[65%] h-[50%] text-[0.8rem] sm:text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] overflow-hidden"
     >
       <div className="w-full h-full flex flex-col">
         <div className="overflow-hidden">
