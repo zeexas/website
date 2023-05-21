@@ -22,7 +22,7 @@ function ProjectDetailPage() {
   const project = projects.filter((item) => item.id === params.projectId)[0];
 
   const backBtnStyle =
-    'text-base sm:text-lg md:text-xl lg:text-2xl italic hover:-translate-x-1 transition';
+    'text-base sm:text-lg md:text-xl italic hover:-translate-x-1 transition';
   const projectLinkStyle = 'font-semibold italic';
   const projectSubtitleStyle = 'uppercase font-semibold';
   const projectDescriptionStyle = 'pl-10 sm:pl-0';
@@ -71,7 +71,7 @@ function ProjectDetailPage() {
           <div className="overflow-hidden">
             <mo.div
               variants={animeItem}
-              className="grid sm:grid-cols-[25%_1fr] gap-2 md:gap-4 mt-4 md:mt-6 text-xs md:text-lg lg:text-xl"
+              className="grid sm:grid-cols-[25%_1fr] gap-2 md:gap-4 mt-4 md:mt-6 text-xs sm:text-sm md:text-base lg:text-lg"
             >
               {langStore === 'ru' && (
                 <mo.div variants={animeBasic} className={projectSubtitleStyle}>

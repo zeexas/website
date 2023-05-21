@@ -1,10 +1,35 @@
 import { motion as mo } from 'framer-motion';
-import { animeBasic, animeContainerStagger, animeItem } from '../data/animation';
+import {
+  animeBasic,
+  animeContainerStagger,
+  animeItem,
+} from '../data/animation';
 import { useSelector } from 'react-redux';
 import { storeState } from '../store';
 
 function Intro() {
   const langStore = useSelector((state: storeState) => state.language);
+
+  const getRandom = (n: number) => {
+    return Math.floor(Math.random() * n);
+  };
+
+  const shuffle = (word: string) => {
+    const arr = word.split('');
+    const n = arr.length;
+
+    for (let i = 0; i < (n - 1); ++i) {
+      const j = getRandom(n);
+      const temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+
+    word = arr.join('');
+    return word;
+  };
+
+  console.log(shuffle('design'));
 
   return (
     <mo.section
@@ -15,31 +40,32 @@ function Intro() {
     >
       <div className="overflow-hidden p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium">
         {langStore === 'ru' && (
-          <mo.p variants={animeItem}>
-            Hi, I am Valery Li
-          </mo.p>
+          <mo.p variants={animeItem}>Hi, I am Valery Li</mo.p>
         )}
         {langStore === 'en' && (
-          <mo.p variants={animeItem}>
-            Привет, меня зовут Валерий!
-          </mo.p>
+          <mo.p variants={animeItem}>Привет, меня зовут Валерий!</mo.p>
         )}
       </div>
       <div className="overflow-hidden mt-6 text-sm sm:text-base md:text-xl lg:text-2xl">
         {langStore === 'ru' && (
-          <mo.p variants={animeItem}>
-            I'm a front-end engineer
-          </mo.p>
+          <mo.p variants={animeItem}>I'm a front-end engineer</mo.p>
         )}
         {langStore === 'en' && (
-          <mo.p variants={animeItem}>
-            Я - фронтенд разработчик
-          </mo.p>
+          <mo.p variants={animeItem}>Я - фронтенд разработчик</mo.p>
         )}
       </div>
       <div className="absolute -bottom-14 text-xs sm:text-sm overflow-hidden">
-        {langStore === 'ru' && <mo.div variants={animeBasic}>Design is under development...</mo.div>}
-        {langStore === 'en' && <mo.div variants={animeBasic}>Дизайн в разработке...</mo.div>}
+        {langStore === 'ru' && (
+          <mo.div variants={animeBasic}>
+            {shuffle('design')} {shuffle('is')} {shuffle('under')}{' '}
+            {shuffle('development')}...
+          </mo.div>
+        )}
+        {langStore === 'en' && (
+          <mo.div variants={animeBasic}>
+            {shuffle('дизайн')} в {shuffle('разработке')}...
+          </mo.div>
+        )}
       </div>
     </mo.section>
   );
