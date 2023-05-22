@@ -15,7 +15,7 @@ export const projects = [
     Browse the world and choose your next holiday destination.
     And pass the quiz before you pack your bag.`,
     about_ru: `Как много Вы знаете о странах, которые можете назвать?
-    Исследуйте мир и выберите свой пункт назначения на следующий отпуск.
+    Исследуйте мир и выберите свой пункт назначения в следующий отпуск.
     И перед тем, как паковать чемодан, пройдите тест.`,
     tech_stack: 'HTML, CSS, Vue 3, Vuex, vue-router, Tailwind CSS, Vite, npm, responsive, mobile-first',
     url: 'https://lee-rest-countries.netlify.app/',
