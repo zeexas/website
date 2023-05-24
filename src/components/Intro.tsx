@@ -29,8 +29,6 @@ function Intro() {
     return word;
   };
 
-  console.log(shuffle('design'));
-
   return (
     <mo.section
       variants={animeContainerStagger}
