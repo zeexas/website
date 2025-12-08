@@ -15,6 +15,7 @@ function WorkPage() {
   const langStore = useSelector((state: storeState) => state.language);
   const modeStore = useSelector((state: storeState) => state.mode);
 
+  const [dermatology, setDermatology] = useState(false);
   const [countries, setCountries] = useState(false);
   const [report, setReport] = useState(false);
   const [website, setWebsite] = useState(false);
@@ -31,6 +32,7 @@ function WorkPage() {
   const workItemStyleAnime = 'animate-freeItem group-hover:animate-hoverItem';
 
   const projectsStateSet: any = {
+    dermatology,
     countries,
     report,
     website,
@@ -41,6 +43,9 @@ function WorkPage() {
 
   const onMouseEnter: any = (id: any) => {
     switch (id) {
+      case 'dermatology':
+        setDermatology(true);
+        break;
       case 'countries':
         setCountries(true);
         break;
@@ -66,6 +71,9 @@ function WorkPage() {
 
   const onMouseLeave: any = (id: any) => {
     switch (id) {
+      case 'dermatology':
+        setDermatology(false);
+        break;
       case 'countries':
         setCountries(false);
         break;
@@ -134,8 +142,8 @@ function WorkPage() {
               })}
             </mo.div>
 
-            <div className="w-[80%] mx-auto lg:w-1/2 h-full">
-              <div className="lg:w-[75%] h-full flex flex-col">
+            <div className="right-block w-[80%] mx-auto lg:w-1/2 h-full">
+              <div className="project-list lg:w-[75%] h-full flex flex-col">
                 <div className="overflow-hidden pb-4">
                   {langStore === 'ru' && (
                     <mo.h3 variants={animeItem} className={titleStyle}>
@@ -182,9 +190,9 @@ function WorkPage() {
                                   </span>
                                 )}
                                 {project.name}
-                                {project.name === 'rest-countries' && (
+                                {project.name === 'derm-clinic' && (
                                   <span className="text-xs sm:text-sm ml-3 sm:ml-6 px-2 py-1 text-lime-200 dark:text-teal-800 bg-teal-800 dark:bg-lime-200 inline-block -skew-x-12 transition">
-                                    Updated!
+                                    New!
                                   </span>
                                 )}
                               </p>

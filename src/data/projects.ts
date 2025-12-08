@@ -4,8 +4,21 @@ import Website from '../assets/work/Website.svg';
 import Bulls from '../assets/work/BullCow.svg';
 import Momentum from '../assets/work/Momentum.svg';
 import ArtQuiz from '../assets/work/ArtQuiz.svg';
+import ComingSoon from '../assets/work/Coming_soon.jpg';
 
 export const projects = [
+  {
+    id: 'dermatology',
+    name: 'derm-clinic',
+    base_tech: 'next / flask / postgres',
+    svg: ComingSoon,
+    about: `dermatology clinic...`,
+    about_ru: `дерматологическая клиника...`,
+    tech_stack:
+      'HTML, CSS, TypeScript, Next, Zustand, MUI, Vite, Flask (Python), Postgres, Railway (deploy), AWS S3',
+    url: '',
+    code: '',
+  },
   {
     id: 'countries',
     name: 'rest-countries',
@@ -17,7 +30,8 @@ export const projects = [
     about_ru: `Как много Вы знаете о странах, которые можете назвать?
     Исследуйте мир и выберите свой пункт назначения в следующий отпуск.
     И перед тем, как паковать чемодан, пройдите тест.`,
-    tech_stack: 'HTML, CSS, Vue 3, Vuex, vue-router, Tailwind CSS, Vite, npm, responsive, mobile-first',
+    tech_stack:
+      'HTML, CSS, Vue 3, Vuex, vue-router, Tailwind CSS, Vite, npm, responsive, mobile-first',
     url: 'https://lee-rest-countries.netlify.app/',
     code: 'https://github.com/zeexas/rest-countries',
   },
@@ -32,7 +46,8 @@ export const projects = [
     about_ru: `Прототип full-stack веб приложения для финансовой компании.
     Приложение получает сведения из базы данных, выводит их в виде отчетности с возможностью экспортировать в Excel.
     Также в наличии функциональность аутентификации пользователя.`,
-    tech_stack: 'React, react-router-dom, TypeScript, Tailwind CSS, Webpack, Nest.js, passport, Prisma, PostgreSQL, REST, yarn, responsive',
+    tech_stack:
+      'React, react-router-dom, TypeScript, Tailwind CSS, Webpack, Nest.js, passport, Prisma, PostgreSQL, REST, yarn, responsive',
     url: null,
     code: 'https://github.com/zeexas/broker-server',
   },
@@ -43,7 +58,8 @@ export const projects = [
     svg: Website,
     about: `This website you are browsing now is a basic project for my portfolio. Inspired by Sharlee`,
     about_ru: `Этот сайт, который Вы в настоящее время исследуете, является базовым проектом моего портфолио. Вдохновлен Sharlee`,
-    tech_stack: 'HTML, CSS, React, TypeScript, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive, mobile-first',
+    tech_stack:
+      'HTML, CSS, React, TypeScript, react-router-dom, Redux Toolkit, Tailwind CSS, framer-motion, Vite, yarn, responsive, mobile-first',
     url: null,
     code: 'https://github.com/zeexas/website',
   },
@@ -66,8 +82,10 @@ export const projects = [
     name: 'momentum',
     base_tech: 'vanilla',
     svg: Momentum,
-    about: 'This is a clone of the popular Google Chrome extension Momentum (not exact but kind of)',
-    about_ru: 'Клон популярного одноименного расширения Google Chrome (не то, чтобы 100% копия, но все же)',
+    about:
+      'This is a clone of the popular Google Chrome extension Momentum (not exact but kind of)',
+    about_ru:
+      'Клон популярного одноименного расширения Google Chrome (не то, чтобы 100% копия, но все же)',
     tech_stack: 'HTML, CSS, JavaScript',
     url: 'https://rolling-scopes-school.github.io/zeexas-JSFE2021Q3/momentum/',
     code: 'https://github.com/zeexas/momentum',
