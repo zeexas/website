@@ -3,7 +3,7 @@ import Css from '../assets/techs/css-3.svg';
 import Sass from '../assets/techs/sass.svg';
 import Tailwind from '../assets/techs/tailwind.svg';
 import MaterialUI from '../assets/techs/material-ui.svg';
-import Bootstrap from '../assets/techs/bootstrap.svg';
+// import Bootstrap from '../assets/techs/bootstrap.svg';
 // import FramerMotion from '../assets/techs/framer-motion.svg';
 import Javascript from '../assets/techs/js.svg';
 import Typescript from '../assets/techs/typescript.svg';
@@ -15,18 +15,20 @@ import Npm from '../assets/techs/npm.svg';
 import Yarn from '../assets/techs/yarn.svg';
 import Git from '../assets/techs/git.svg';
 import Github from '../assets/techs/github.svg';
+import Gitlab from '../assets/techs/gitlab.svg';
 import VScode from '../assets/techs/vscode.svg';
 import Figma from '../assets/techs/figma.svg';
 import Postgresql from '../assets/techs/postgresql.svg';
-import Strapi from '../assets/techs/strapi.svg';
-import Nest from '../assets/techs/nestjs.svg';
+// import Strapi from '../assets/techs/strapi.svg';
+// import Nest from '../assets/techs/nestjs.svg';
 import Nodejs from '../assets/techs/nodejs.svg';
 import Postman from '../assets/techs/postman.svg';
 import Prisma from '../assets/techs/prisma.svg';
 import PrismaWhite from '../assets/techs/prisma_white.svg';
 import Webpack from '../assets/techs/webpack.svg';
 import Vite from '../assets/techs/vitejs.svg';
-import Stripe from '../assets/techs/stripe.svg';
+// import Stripe from '../assets/techs/stripe.svg';
+import Zustand from '../assets/techs/zustand.svg';
 
 export const techsMain = [
   {
@@ -59,12 +61,12 @@ export const techsMain = [
     svg: MaterialUI,
     url: "https://mui.com/",
   },
-  {
-    id: 'bootstrap',
-    name: 'bootstrap',
-    svg: Bootstrap,
-    url: "https://getbootstrap.com/",
-  },
+  // {
+  //   id: 'bootstrap',
+  //   name: 'bootstrap',
+  //   svg: Bootstrap,
+  //   url: "https://getbootstrap.com/",
+  // },
   {
     id: 'javascript',
     name: 'javascript',
@@ -82,6 +84,12 @@ export const techsMain = [
     name: 'react',
     svg: Reactlogo,
     url: "https://react.dev/",
+  },
+  {
+    id: 'zustand',
+    name: 'zustand',
+    svg: Zustand,
+    url: "https://zustand-demo.pmnd.rs/",
   },
   {
     id: 'redux',
@@ -129,6 +137,12 @@ export const techsOthers = [
     url: "https://github.com/",
   },
   {
+    id: 'gitlab',
+    name: 'gitlab',
+    svg: Gitlab,
+    url: "https://gitlab.com/",
+  },
+  {
     id: 'vscode',
     name: 'vscode',
     svg: VScode,
@@ -146,18 +160,18 @@ export const techsOthers = [
     svg: Postgresql,
     url: "https://www.postgresql.org/",
   },
-  {
-    id: 'strapi',
-    name: 'strapi',
-    svg: Strapi,
-    url: "https://strapi.io/",
-  },
-  {
-    id: 'nestjs',
-    name: 'nestjs',
-    svg: Nest,
-    url: "https://nestjs.com/",
-  },
+  // {
+  //   id: 'strapi',
+  //   name: 'strapi',
+  //   svg: Strapi,
+  //   url: "https://strapi.io/",
+  // },
+  // {
+  //   id: 'nestjs',
+  //   name: 'nestjs',
+  //   svg: Nest,
+  //   url: "https://nestjs.com/",
+  // },
   {
     id: 'nodejs',
     name: 'nodejs',
@@ -191,11 +205,11 @@ export const techsOthers = [
     svg: Vite,
     url: "https://vitejs.dev/",
   },
-  {
-    id: 'stripe',
-    name: 'stripe',
-    svg: Stripe,
-    url: "https://stripe.com/",
-  },
+  // {
+  //   id: 'stripe',
+  //   name: 'stripe',
+  //   svg: Stripe,
+  //   url: "https://stripe.com/",
+  // },
   
 ]
